@@ -227,28 +227,36 @@
             background: #fafafa;
             padding-right: 16px;
             text-transform: uppercase;
-            font-size: 0.85em;
+            font-size: 0.8em;
             letter-spacing: 0.3px;
-            line-height: 1.4;
+            line-height: 1.3;
         }
         
         .info-table td:last-child {
             width: 100%;
-            font-size: 1.08em;
-            line-height: 1.35;
+            font-size: 1.1em;
+            line-height: 1.4;
             color: #222;
-            transform: scaleX(0.85);
+            transform: scaleX(0.9);
             transform-origin: left center;
+            letter-spacing: 0.02em;
+        }
+        
+        .dias-destacado {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.1em;
         }
         
         .badge {
             display: inline-block;
             padding: 6px 12px;
             border-radius: 20px;
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-weight: 600;
-            white-space: nowrap;
-            transform: scaleX(1);
+            line-height: 1.3;
+            text-align: center;
+            transform: scaleX(0.95);
         }
         
         .badge-retribuida {
@@ -264,6 +272,7 @@
         .badge-proporcional {
             background: #fff3cd;
             color: #856404;
+            padding: 8px 12px;
         }
         
         .norma {
@@ -376,11 +385,11 @@
         @media (max-width: 600px) {
             .info-table td:first-child {
                 padding-right: 12px;
-                font-size: 0.8em;
+                font-size: 0.75em;
             }
             
             .info-table td:last-child {
-                font-size: 1em;
+                font-size: 1.05em;
             }
         }
         
@@ -404,22 +413,22 @@
             
             .info-table td:first-child {
                 padding-right: 10px;
-                font-size: 0.78em;
+                font-size: 0.72em;
             }
             
             .info-table td:last-child {
-                font-size: 0.95em;
-                line-height: 1.3;
+                font-size: 1em;
+                line-height: 1.35;
+            }
+            
+            .badge {
+                font-size: 0.8em;
+                padding: 5px 8px;
             }
             
             .norma {
                 font-size: 0.82em;
                 padding: 3px 6px;
-            }
-            
-            .badge {
-                font-size: 0.85em;
-                padding: 5px 10px;
             }
         }
         
@@ -430,10 +439,10 @@
             .result { border-left: none; padding: 0; }
             .info-table { font-size: 0.9em; }
             .info-table td { padding: 10px 8px; }
-            .info-table td:first-child { font-size: 0.8em; }
+            .info-table td:first-child { font-size: 0.75em; }
             .info-table td:last-child { 
-                font-size: 1em; 
-                transform: scaleX(0.85);
+                font-size: 1.05em; 
+                transform: scaleX(0.9);
             }
         }
     </style>
@@ -492,15 +501,15 @@
                 nombre: "PROPIA",
                 subcategorias: {
                     matrimonio: { nombre: "Matrimonio propio ou constituición de parella de feito" },
-                    nacimiento: { nombre: "Nacemento, adopción ou acollemento (permiso de maternidade ou paternidade)", requiereDetalle: true },
-                    lactancia: { nombre: "Permiso de lactancia por fillo ou filla propia", requiereDetalle: true },
-                    riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural" },
+                    riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural", requiereDetalle: true },
                     formacion: { nombre: "Formación individual do traballador ou traballadora" },
                     examen: { nombre: "Asistencia a exames ou probas de selección" },
                     traslado: { nombre: "Traslado de domicilio habitual" },
                     violencia: { nombre: "Asistencia como vítima de violencia de xénero" },
                     donacion_sangre: { nombre: "Doazón de sangue ou órganos" },
-                    sindical: { nombre: "Exercicio de funcións sindicais ou de representación" }
+                    sindical: { nombre: "Exercicio de funcións sindicais ou de representación" },
+                    excedencia: { nombre: "Excedencia voluntaria especial por falecemento (A.P.6.6)" },
+                    bolsa_medico: { nombre: "Bolsa horas acompañamento médico (A.P.6.7)" }
                 }
             },
             pareja: {
@@ -515,6 +524,9 @@
             hijo: {
                 nombre: "FILLA/O (Propios ou da parella)",
                 subcategorias: {
+                    nacimiento: { nombre: "Nacemento, adopción ou acollemento (permiso de maternidade ou paternidade)", requiereDetalle: true },
+                    lactancia: { nombre: "Permiso de lactancia por fillo ou filla propia", requiereDetalle: true },
+                    riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural" },
                     hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
                     enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
                     matrimonio: { nombre: "Matrimonio" },
@@ -590,61 +602,34 @@
             propia_matrimonio: {
                 motivo: "Matrimonio do traballador ou traballadora ou constituición de parella de feito inscrita no rexistro correspondente",
                 parentesco: "Propio",
-                tiempo: "15 días naturais",
+                tiempo: "<span class='dias-destacado'>15 días</span> naturais",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de matrimonio ou documentación acreditativa da parella de feito",
                 normas: ["E. 37.3.a", "C. Artes Gráficas 8.4.a"]
             },
-            propia_nacimiento_maternidade: {
-                motivo: "Nacemento de fillo ou filla",
-                parentesco: "Propio (como nai)",
-                tiempo: "16 semanas ininterrompidas, das cales 6 son obrigatorias inmediatamente posteriores ao parto",
-                tiempoDesplazamiento: null,
-                caracter: "retribuida",
-                justificante: "Certificado de nacemento",
-                normas: ["E. 48.1", "L.F. 6.1", "C. Artes Gráficas 8.4.c"]
-            },
-            propia_nacimiento_paternidade: {
-                motivo: "Nacemento de fillo ou filla",
-                parentesco: "Propio (como pai)",
-                tiempo: "16 semanas ininterrompidas ou fraccionadas, das cales 10 poden ser transferidas da nai",
-                tiempoDesplazamiento: null,
-                caracter: "retribuida",
-                justificante: "Certificado de nacemento",
-                normas: ["E. 48.4", "L.F. 6.3", "C. Artes Gráficas 8.4.c"]
-            },
-            propia_lactancia_hora: {
-                motivo: "Lactancia de fillo ou filla menor de 9 meses, ou de 13 meses en caso de nacemento prematuro ou hospitalización prolongada",
-                parentesco: "Propio (pai ou nai)",
-                tiempo: "1 hora ao día, divisible en dúas fraccións, ou reducción da xornada en media hora, durante 9 meses (ou 13 en caso de prematuro)",
-                tiempoDesplazamiento: null,
-                caracter: "retribuida",
-                justificante: "Certificado de nacemento",
-                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
-            },
-            propia_lactancia_acumulacion: {
-                motivo: "Acumulación do permiso de lactancia en días completos",
-                parentesco: "Propio (pai ou nai)",
-                tiempo: "15 días naturais (equivalentes a 12 días hábiles)",
-                tiempoDesplazamiento: null,
-                caracter: "retribuida",
-                justificante: "Certificado de nacemento e solicitude de acumulación",
-                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
-            },
-            propia_riesgo: {
-                motivo: "Suspensión do contrato por risco durante o embarazo ou a lactancia natural",
-                parentesco: "Propio (traballadora embarazada ou nai lactante)",
+            propia_riesgo_embarazo: {
+                motivo: "Suspensión do contrato por risco durante o embarazo",
+                parentesco: "Propio (traballadora embarazada)",
                 tiempo: "Duración do risco, ata un máximo equivalente á prestación por maternidade",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida (por prestación do INSS)",
                 justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do feto",
                 normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
             },
+            propia_riesgo_lactancia: {
+                motivo: "Suspensión do contrato por risco durante a lactancia natural",
+                parentesco: "Propio (nai lactante)",
+                tiempo: "Duración do risco, ata un máximo equivalente á prestación por maternidade",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida (por prestación do INSS)",
+                justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do lactante",
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+            },
             propia_formacion: {
                 motivo: "Formación individual do traballador ou traballadora para a mellora do seu posto de traballo ou a súa promoción profesional",
                 parentesco: "Propio",
-                tiempo: "20 horas anuais, acumulables ata un máximo de 100 horas (5 anos)",
+                tiempo: "<span class='dias-destacado'>20 horas</span> anuais, acumulables ata un máximo de <span class='dias-destacado'>100 horas</span> (5 anos)",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Matrícula ou documentación acreditativa da actividade formativa",
@@ -653,7 +638,7 @@
             propia_examen: {
                 motivo: "Asistencia a exames ou probas de selección para o acceso a empregos públicos ou a outras entidades",
                 parentesco: "Propio",
-                tiempo: "Horas necesarias para a realización das probas, cun máximo dunha xornada completa cando se precise desprazamento",
+                tiempo: "Horas necesarias para a realización das probas, cun máximo de <span class='dias-destacado'>unha xornada completa</span> cando se precise desprazamento",
                 tiempoDesplazamiento: "Máximo dunha xornada completa cando se precise desprazamento",
                 caracter: "retribuida",
                 justificante: "Convocatoria, citación ou documentación acreditativa das probas",
@@ -662,7 +647,7 @@
             propia_traslado: {
                 motivo: "Traslado de domicilio habitual do traballador ou traballadora",
                 parentesco: "Propio",
-                tiempo: "1 día natural",
+                tiempo: "<span class='dias-destacado'>1 día</span> natural",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Documentación acreditativa do cambio de domicilio (contrato de aluguer, escritura, etc.)",
@@ -671,7 +656,7 @@
             propia_violencia: {
                 motivo: "Asistencia como vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
                 parentesco: "Propio",
-                tiempo: "Redución ou reordenación da xornada de traballo, ata un máximo de 6 meses prorrogables, ou permiso total",
+                tiempo: "Redución ou reordenación da xornada de traballo, ata un máximo de <span class='dias-destacado'>6 meses</span> prorrogables, ou permiso total",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
@@ -689,18 +674,40 @@
             propia_sindical: {
                 motivo: "Exercicio de funcións sindicais ou de representación dos traballadores e traballadoras",
                 parentesco: "Propio (delegado ou delegada de persoal, membro do comité de empresa ou sindical)",
-                tiempo: "Horas mensuais establecidas no convenio: 1 hora para cada 50 traballadores ou traballadoras, ata un máximo de 15 horas mensuais",
+                tiempo: "<span class='dias-destacado'>1 hora</span> para cada 50 traballadores/as, ata un máximo de <span class='dias-destacado'>15 horas</span> mensuais",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Acreditación de cargo ou representación",
                 normas: ["E. 37.3", "C. Artes Gráficas 10"]
+            },
+            propia_excedencia: {
+                motivo: "Excedencia voluntaria especial por falecemento de cónxuxe, parella de feito, fillos/as propios ou fillos/as da parella",
+                parentesco: "Propio (traballador/a afectado/a)",
+                tiempo: "Ata <span class='dias-destacado'>3 meses</span> (nos mesmos termos do artigo 9.1.2 do Convenio Colectivo). Respeto da antigüidade para os cómputos salariais correspondentes",
+                tiempoDesplazamiento: null,
+                caracter: "non-retribuida",
+                justificante: "Certificado de defunción e solicitude formal de excedencia voluntaria especial",
+                normas: ["E. 46", "C. Artes Gráficas 9.1.2"],
+                pi: "A.P.6.6",
+                piDetalle: "Ampliación do PI Vicusgraf: Posibilidade de excedencia voluntaria especial ata 3 meses (ultrapasa o que establece o Convenio). A empresa respectará a antigüidade para os cómputos salariais correspondentes durante este período."
+            },
+            propia_bolsa_medico: {
+                motivo: "Acompañamento a consultorio médico a descendentes menores de ata 14 anos ou a familiares de primeiro grao de consanguinidade que requiran dito acompañamento",
+                parentesco: "Propio (como proxenitor/a ou familiar coidador)",
+                tiempo: "Bolsa de <span class='dias-destacado'>8 horas</span> anuais retribuídas",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Documentación acreditativa da cita médica e, se é o caso, documentación que acredite a necesidade de acompañamento do familiar",
+                normas: ["C. Artes Gráficas (base para a ampliación)"],
+                pi: "A.P.6.7",
+                piDetalle: "Bolsa exclusiva do PI Vicusgraf: 8 horas anuais retribuídas específicas para acompañamento médico a menores de 14 anos ou familiares de primeiro grao de consanguinidade dependentes. Non incluída no Convenio Colectivo nin no ET."
             },
             
             // PARELLA
             pareja_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario da parella",
                 parentesco: "Cónxuxe, parella de feito ou persoa convivente que requira coidado efectivo",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -712,14 +719,14 @@
                 parentesco: "Cónxuxe, parella de feito ou persoa convivente",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente ou con prestacións",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             pareja_violencia: {
                 motivo: "Asistencia á parella vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
                 parentesco: "Cónxuxe ou parella de feito",
-                tiempo: "Redución ou reordenación da xornada de traballo, ata un máximo de 6 meses prorrogables, ou permiso total",
+                tiempo: "Redución ou reordenación da xornada de traballo, ata un máximo de <span class='dias-destacado'>6 meses</span> prorrogables, ou permiso total",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
@@ -728,8 +735,8 @@
             pareja_fallecimiento: {
                 motivo: "Falecemento da parella, cónxuxe ou persoa con quen se cohabite",
                 parentesco: "Cónxuxe, parella de feito ou persoa convivente (1º grao)",
-                tiempo: "3 días naturais",
-                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>3 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>5 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción e, se é o caso, documentación acreditativa da parella de feito ou da convivencia",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
@@ -738,10 +745,64 @@
             },
             
             // FILLA/O
+            hijo_nacimiento_maternidade: {
+                motivo: "Nacemento de fillo ou filla",
+                parentesco: "Propio (como nai)",
+                tiempo: "<span class='dias-destacado'>16 semanas</span> ininterrompidas, das cales <span class='dias-destacado'>6</span> son obrigatorias inmediatamente posteriores ao parto",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento",
+                normas: ["E. 48.1", "L.F. 6.1", "C. Artes Gráficas 8.4.c"]
+            },
+            hijo_nacimiento_paternidade: {
+                motivo: "Nacemento de fillo ou filla",
+                parentesco: "Propio (como pai)",
+                tiempo: "<span class='dias-destacado'>16 semanas</span> ininterrompidas ou fraccionadas, das cales <span class='dias-destacado'>10</span> poden ser transferidas da nai",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento",
+                normas: ["E. 48.4", "L.F. 6.3", "C. Artes Gráficas 8.4.c"]
+            },
+            hijo_lactancia_hora: {
+                motivo: "Lactancia de fillo ou filla menor de 9 meses, ou de 13 meses en caso de nacemento prematuro ou hospitalización prolongada",
+                parentesco: "Propio (pai ou nai)",
+                tiempo: "<span class='dias-destacado'>1 hora</span> ao día, divisible en dúas fraccións, ou reducción da xornada en <span class='dias-destacado'>media hora</span>, durante <span class='dias-destacado'>9 meses</span> (ou 13 en caso de prematuro)",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento",
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
+            },
+            hijo_lactancia_acumulacion: {
+                motivo: "Acumulación do permiso de lactancia en días completos",
+                parentesco: "Propio (pai ou nai)",
+                tiempo: "<span class='dias-destacado'>15 días</span> naturais (equivalentes a <span class='dias-destacado'>12 días</span> hábiles)",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento e solicitude de acumulación",
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
+            },
+            hijo_riesgo_embarazo: {
+                motivo: "Suspensión do contrato por risco durante o embarazo",
+                parentesco: "Propio (traballadora embarazada)",
+                tiempo: "Duración do risco, ata un máximo equivalente á prestación por maternidade",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida (por prestación do INSS)",
+                justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do feto",
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+            },
+            hijo_riesgo_lactancia: {
+                motivo: "Suspensión do contrato por risco durante a lactancia natural",
+                parentesco: "Propio (nai lactante)",
+                tiempo: "Duración do risco, ata un máximo equivalente á prestación por maternidade",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida (por prestación do INSS)",
+                justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do lactante",
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+            },
             hijo_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do fillo ou filla",
                 parentesco: "Descendente (fillo ou filla)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -752,15 +813,15 @@
                 parentesco: "Descendente (fillo ou filla)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             hijo_matrimonio: {
                 motivo: "Matrimonio do fillo ou filla",
                 parentesco: "Descendente (fillo ou filla)",
-                tiempo: "1 día natural",
-                tiempoDesplazamiento: "2 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>1 día</span> natural",
+                tiempoDesplazamiento: "<span class='dias-destacado'>2 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
                 normas: ["E. 37.3", "C. Artes Gráficas 10.1"]
@@ -768,7 +829,7 @@
             hijo_nacimiento_nieto: {
                 motivo: "Nacemento de neto ou neta (fillo ou filla do propio fillo ou filla)",
                 parentesco: "Descendente en segundo grao (neto ou neta)",
-                tiempo: "2 días naturais",
+                tiempo: "<span class='dias-destacado'>2 días</span> naturais",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
@@ -777,8 +838,8 @@
             hijo_fallecimiento: {
                 motivo: "Falecemento do fillo ou filla",
                 parentesco: "Descendente (fillo ou filla)",
-                tiempo: "3 días naturais",
-                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>3 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>5 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
@@ -790,7 +851,7 @@
             padres_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do pai ou da nai",
                 parentesco: "Ascendente (pai ou nai)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -801,7 +862,7 @@
                 parentesco: "Ascendente (pai ou nai)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
@@ -818,8 +879,8 @@
             padres_fallecimiento: {
                 motivo: "Falecemento do pai ou da nai",
                 parentesco: "Ascendente (pai ou nai)",
-                tiempo: "3 días naturais",
-                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>3 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>5 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
@@ -831,7 +892,7 @@
             suegros_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do sogro ou da sogra",
                 parentesco: "Ascendente da parella (sogro ou sogra)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -843,15 +904,15 @@
                 parentesco: "Ascendente da parella (sogro ou sogra)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             suegros_fallecimiento: {
                 motivo: "Falecemento do sogro ou da sogra",
                 parentesco: "Ascendente da parella (sogro ou sogra)",
-                tiempo: "3 días naturais",
-                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>3 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>5 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
@@ -863,7 +924,7 @@
             hermanos_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do irmán ou da irmá",
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -874,15 +935,15 @@
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             hermanos_matrimonio: {
                 motivo: "Matrimonio do irmán ou da irmá",
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
-                tiempo: "1 día natural",
-                tiempoDesplazamiento: "2 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>1 día</span> natural",
+                tiempoDesplazamiento: "<span class='dias-destacado'>2 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
                 normas: ["E. 37.3", "C. Artes Gráficas 10.1"]
@@ -890,7 +951,7 @@
             hermanos_nacimiento_sobrino: {
                 motivo: "Nacemento de sobriño ou sobriña (fillo ou filla do irmán ou da irmá)",
                 parentesco: "Segundo grao de consanguinidade (sobriño ou sobriña)",
-                tiempo: "1 día natural",
+                tiempo: "<span class='dias-destacado'>1 día</span> natural",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
@@ -899,8 +960,8 @@
             hermanos_fallecimiento: {
                 motivo: "Falecemento do irmán ou da irmá",
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
-                tiempo: "2 días naturais",
-                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>2 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>4 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
@@ -910,7 +971,7 @@
             nietos_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do neto ou da neta",
                 parentesco: "Segundo grao de consanguinidade (neto ou neta)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -921,14 +982,14 @@
                 parentesco: "Segundo grao de consanguinidade (neto ou neta)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             nietos_nacimiento: {
                 motivo: "Nacemento de neto ou neta (fillo ou filla do propio fillo ou filla)",
                 parentesco: "Descendente en segundo grao (neto ou neta)",
-                tiempo: "2 días naturais",
+                tiempo: "<span class='dias-destacado'>2 días</span> naturais",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
@@ -937,8 +998,8 @@
             nietos_fallecimiento: {
                 motivo: "Falecemento do neto ou da neta",
                 parentesco: "Segundo grao de consanguinidade (neto ou neta)",
-                tiempo: "2 días naturais",
-                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>2 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>4 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
@@ -948,7 +1009,7 @@
             abuelos_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do avó ou da avoa",
                 parentesco: "Segundo grao de consanguinidade (avó ou avoa)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -959,15 +1020,15 @@
                 parentesco: "Segundo grao de consanguinidade (avó ou avoa)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             abuelos_fallecimiento: {
                 motivo: "Falecemento do avó ou da avoa",
                 parentesco: "Segundo grao de consanguinidade (avó ou avoa)",
-                tiempo: "2 días naturais",
-                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>2 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>4 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
@@ -977,7 +1038,7 @@
             yerno_nuera_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do xenro ou da nora",
                 parentesco: "Segundo grao de afinidade (xenro ou nora, parella do fillo ou filla)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
@@ -988,15 +1049,15 @@
                 parentesco: "Segundo grao de afinidade (xenro ou nora, parella do fillo ou filla)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             yerno_nuera_fallecimiento: {
                 motivo: "Falecemento do xenro ou da nora",
                 parentesco: "Segundo grao de afinidade (xenro ou nora, parella do fillo ou filla)",
-                tiempo: "2 días naturais",
-                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                tiempo: "<span class='dias-destacado'>2 días</span> naturais",
+                tiempoDesplazamiento: "<span class='dias-destacado'>4 días</span> naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
@@ -1006,7 +1067,7 @@
             convivente_hospitalizacion: {
                 motivo: "Hospitalización de persoa convivente dependente que non teña condición de familiar",
                 parentesco: "Persoa convivente dependente (sen parentesco)",
-                tiempo: "5 días hábiles",
+                tiempo: "<span class='dias-destacado'>5 días</span> hábiles",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización e documentación acreditativa da dependencia e da convivencia",
@@ -1017,56 +1078,38 @@
                 parentesco: "Persoa convivente dependente (sen parentesco)",
                 tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
                 tiempoDesplazamiento: null,
-                caracter: "retribuida proporcionalmente",
+                caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos, e documentación da dependencia",
                 normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             convivente_fallecimiento: {
                 motivo: "Falecemento de persoa convivente dependente que non teña condición de familiar",
                 parentesco: "Persoa convivente dependente (sen parentesco)",
-                tiempo: "2 días naturais",
+                tiempo: "<span class='dias-destacado'>2 días</span> naturais",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción, certificado de convivencia ou empadroamento e documentación acreditativa da dependencia",
                 normas: ["L.F. 9", "C. Artes Gráficas 6.3"]
-            },
-            
-            // EXCEDENCIA VOLUNTARIA ESPECIAL - A.P.6.6
-            propia_excedencia_voluntaria: {
-                motivo: "Excedencia voluntaria especial por falecemento de cónxuxe, parella de feito, fillos/as propios ou fillos/as da parella",
-                parentesco: "Propio (traballador/a afectado/a)",
-                tiempo: "Ata 3 meses (nos mesmos termos do artigo 9.1.2 do Convenio Colectivo). Respeto da antigüidade para os cómputos salariais correspondentes",
-                tiempoDesplazamiento: null,
-                caracter: "non retribuida (con reserva de posto e antigüidade)",
-                justificante: "Certificado de defunción e solicitude formal de excedencia voluntaria especial",
-                normas: ["E. 46", "C. Artes Gráficas 9.1.2"],
-                pi: "A.P.6.6",
-                piDetalle: "Ampliación do PI Vicusgraf: Posibilidade de excedencia voluntaria especial ata 3 meses (ultrapasa o que establece o Convenio). A empresa respectará a antigüidade para os cómputos salariais correspondentes durante este período."
-            },
-            
-            // BOLSA HORAS ACOMPAÑAMENTO MÉDICO - A.P.6.7
-            propia_bolsa_acompanamento: {
-                motivo: "Acompañamento a consultorio médico a descendentes menores de ata 14 anos ou a familiares de primeiro grao de consanguinidade que requiran dito acompañamento",
-                parentesco: "Propio (como proxenitor/a ou familiar coidador)",
-                tiempo: "Bolsa de 8 horas anuais retribuídas",
-                tiempoDesplazamiento: null,
-                caracter: "retribuida",
-                justificante: "Documentación acreditativa da cita médica e, se é o caso, documentación que acredite a necesidade de acompañamento do familiar",
-                normas: ["C. Artes Gráficas (base para a ampliación)"],
-                pi: "A.P.6.7",
-                piDetalle: "Bolsa exclusiva do PI Vicusgraf: 8 horas anuais retribuídas específicas para acompañamento médico a menores de 14 anos ou familiares de primeiro grao de consanguinidade dependentes. Non incluída no Convenio Colectivo nin no ET."
             }
         };
 
         // DETALLES ADICIONAIS PARA CASOS ESPECÍFICOS
         const detallesOpciones = {
-            propia_nacimiento: {
+            propia_riesgo: {
+                embarazo: "Risco durante o embarazo",
+                lactancia: "Risco durante a lactancia natural"
+            },
+            hijo_nacimiento: {
                 maternidade: "Permiso de maternidade (como nai)",
                 paternidade: "Permiso de paternidade (como pai)"
             },
-            propia_lactancia: {
+            hijo_lactancia: {
                 hora: "Redución de xornada (1 hora ao día ou media hora)",
                 acumulacion: "Acumulación en días completos (15 días naturais)"
+            },
+            hijo_riesgo: {
+                embarazo: "Risco durante o embarazo",
+                lactancia: "Risco durante a lactancia natural"
             }
         };
 
@@ -1167,7 +1210,7 @@
                               data.caracter === 'no-retribuida' ? 'badge-no-retribuida' : 'badge-proporcional';
             
             const badgeText = data.caracter === 'retribuida' ? 'RETRIBUÍDA' : 
-                             data.caracter === 'no-retribuida' ? 'NON RETRIBUÍDA' : 'RETRIBUCIÓN PROPORCIONAL';
+                             data.caracter === 'no-retribuida' ? 'NON<br>RETRIBUÍDA' : 'RETRIBUCIÓN<br>PROPORCIONAL';
             
             const normasHtml = data.normas.map(n => `<span class="norma">${n}</span>`).join('');
             
@@ -1175,7 +1218,7 @@
             if (data.tiempoDesplazamiento) {
                 tiempoHtml = `
                     <tr>
-                        <td>TEMPO DE AUSENCIA:</td>
+                        <td>TEMPO<br>DE AUSENCIA:</td>
                         <td>
                             <div><strong>Sen desprazamento:</strong> ${data.tiempo}</div>
                             <div class="dias-desplazamiento"><strong>Con desprazamento >300km (ida+volta):</strong> ${data.tiempoDesplazamiento}</div>
@@ -1185,7 +1228,7 @@
             } else {
                 tiempoHtml = `
                     <tr>
-                        <td>TEMPO DE AUSENCIA:</td>
+                        <td>TEMPO<br>DE AUSENCIA:</td>
                         <td>${data.tiempo}</td>
                     </tr>
                 `;
@@ -1216,7 +1259,7 @@
                 ${piHtml}
                 ${notaHtml}
                 <div class="warning-box">
-                    <strong>⚠️ Nota importante:</strong> Esta información é orientativa e ten carácter meramente informativo. En caso de dúbida ou para a xestión formal da ausencia, é imprescindible consultar co departamento de Recursos Humanos de Vicusgraf-Hinojosa. A normativa aplicable pode variar en función de actualizacións legais ou de convenio.
+                    <strong>⚠️ Nota importante:</strong> En caso de dúbida, consultar co comité de empresa, e para a xestión formal da ausencia, co departamento de Recursos Humanos de Vicusgraf-Hinojosa. A normativa aplicable pode variar en función de actualizacións legais ou de convenio.
                 </div>
             `;
             
