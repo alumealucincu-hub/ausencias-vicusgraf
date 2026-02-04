@@ -208,10 +208,9 @@
         }
         
         .info-table td {
-            padding: 16px;
+            padding: 14px 10px;
             border-bottom: 1px solid #e8e8e8;
             vertical-align: top;
-            line-height: 1.6;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
@@ -221,23 +220,35 @@
         }
         
         .info-table td:first-child {
-            font-weight: 600;
-            color: #555;
-            width: 35%;
+            font-weight: 700;
+            color: #444;
+            width: auto;
+            white-space: nowrap;
             background: #fafafa;
+            padding-right: 16px;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
         }
         
         .info-table td:last-child {
-            width: 65%;
+            width: 100%;
+            font-size: 1.08em;
+            line-height: 1.35;
+            color: #222;
+            transform: scaleX(0.85);
+            transform-origin: left center;
         }
         
         .badge {
             display: inline-block;
-            padding: 8px 14px;
+            padding: 6px 12px;
             border-radius: 20px;
-            font-size: 0.95em;
+            font-size: 0.9em;
             font-weight: 600;
             white-space: nowrap;
+            transform: scaleX(1);
         }
         
         .badge-retribuida {
@@ -259,58 +270,93 @@
             display: inline-block;
             background: #e3f2fd;
             color: #1976d2;
-            padding: 5px 10px;
+            padding: 4px 8px;
             border-radius: 6px;
-            font-size: 0.9em;
-            margin: 3px 6px 3px 0;
+            font-size: 0.85em;
+            margin: 2px 4px 2px 0;
             font-weight: 500;
             word-break: keep-all;
+            transform: scaleX(1);
         }
         
         .dias-desplazamiento {
             background: #f0f7ff;
             border-left: 3px solid #667eea;
-            padding: 12px;
-            margin-top: 10px;
-            border-radius: 8px;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 6px;
             font-size: 0.95em;
-            line-height: 1.5;
+            line-height: 1.3;
+            transform: scaleX(1);
+        }
+        
+        .dias-desplazamiento strong {
+            transform: scaleX(1);
+            display: inline-block;
         }
         
         .ley-familias {
             background: #e8f5e9;
             border-left: 4px solid #4caf50;
-            padding: 16px;
-            margin-top: 20px;
+            padding: 14px;
+            margin-top: 15px;
             border-radius: 8px;
             font-size: 0.95em;
-            line-height: 1.6;
+            line-height: 1.45;
             word-wrap: break-word;
         }
         
         .warning-box {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 16px;
-            margin-top: 20px;
+            padding: 14px;
+            margin-top: 15px;
             border-radius: 8px;
             font-size: 0.9em;
-            line-height: 1.6;
+            line-height: 1.5;
             word-wrap: break-word;
         }
         
         .pi-box {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 16px;
-            margin-top: 15px;
+            background: #fff8e1;
+            border-left: 4px solid #ff9800;
+            padding: 14px;
+            margin-top: 12px;
             border-radius: 8px;
             font-size: 0.95em;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         .pi-box strong {
-            color: #1565c0;
+            color: #e65100;
+        }
+        
+        .excedencia-box {
+            background: #fce4ec;
+            border-left: 4px solid #e91e63;
+            padding: 14px;
+            margin-top: 12px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .excedencia-box strong {
+            color: #c2185b;
+        }
+        
+        .bolsa-box {
+            background: #e0f2f1;
+            border-left: 4px solid #009688;
+            padding: 14px;
+            margin-top: 12px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .bolsa-box strong {
+            color: #00695c;
         }
         
         .progress-bar {
@@ -329,13 +375,12 @@
         
         @media (max-width: 600px) {
             .info-table td:first-child {
-                width: 40%;
-                font-size: 0.95em;
+                padding-right: 12px;
+                font-size: 0.8em;
             }
             
             .info-table td:last-child {
-                width: 60%;
-                font-size: 0.95em;
+                font-size: 1em;
             }
         }
         
@@ -350,24 +395,31 @@
             }
             
             .info-table {
-                font-size: 0.9em;
+                font-size: 0.95em;
             }
             
             .info-table td {
-                padding: 12px;
+                padding: 12px 8px;
             }
             
             .info-table td:first-child {
-                width: 45%;
+                padding-right: 10px;
+                font-size: 0.78em;
             }
             
             .info-table td:last-child {
-                width: 55%;
+                font-size: 0.95em;
+                line-height: 1.3;
             }
             
             .norma {
+                font-size: 0.82em;
+                padding: 3px 6px;
+            }
+            
+            .badge {
                 font-size: 0.85em;
-                padding: 4px 8px;
+                padding: 5px 10px;
             }
         }
         
@@ -377,7 +429,12 @@
             .btn-grid, .back-btn, .progress-bar { display: none; }
             .result { border-left: none; padding: 0; }
             .info-table { font-size: 0.9em; }
-            .info-table td { padding: 12px; }
+            .info-table td { padding: 10px 8px; }
+            .info-table td:first-child { font-size: 0.8em; }
+            .info-table td:last-child { 
+                font-size: 1em; 
+                transform: scaleX(0.85);
+            }
         }
     </style>
 </head>
@@ -537,8 +594,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de matrimonio ou documentación acreditativa da parella de feito",
-                normas: ["E. 37.3.a", "C. Artes Gráficas 8.4.a"],
-                pi: "A.P.6.4: Permiso retribuído por matrimonio ou constituición de parella de feito"
+                normas: ["E. 37.3.a", "C. Artes Gráficas 8.4.a"]
             },
             propia_nacimiento_maternidade: {
                 motivo: "Nacemento de fillo ou filla",
@@ -547,8 +603,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 48.1", "L.F. 6.1", "C. Artes Gráficas 8.4.c"],
-                pi: "A.P.6.1: Permiso de maternidade con dedicación exclusiva ao coidado do lactante"
+                normas: ["E. 48.1", "L.F. 6.1", "C. Artes Gráficas 8.4.c"]
             },
             propia_nacimiento_paternidade: {
                 motivo: "Nacemento de fillo ou filla",
@@ -557,8 +612,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 48.4", "L.F. 6.3", "C. Artes Gráficas 8.4.c"],
-                pi: "A.P.6.1: Permiso de paternidade coa mesma duración que o de maternidade"
+                normas: ["E. 48.4", "L.F. 6.3", "C. Artes Gráficas 8.4.c"]
             },
             propia_lactancia_hora: {
                 motivo: "Lactancia de fillo ou filla menor de 9 meses, ou de 13 meses en caso de nacemento prematuro ou hospitalización prolongada",
@@ -567,8 +621,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"],
-                pi: "A.P.6.3: Permiso de lactancia con flexibilidade horaria"
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
             },
             propia_lactancia_acumulacion: {
                 motivo: "Acumulación do permiso de lactancia en días completos",
@@ -577,8 +630,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento e solicitude de acumulación",
-                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"],
-                pi: "A.P.6.3: Acumulación do permiso de lactancia en días completos"
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
             },
             propia_riesgo: {
                 motivo: "Suspensión do contrato por risco durante o embarazo ou a lactancia natural",
@@ -587,8 +639,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida (por prestación do INSS)",
                 justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do feto",
-                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"],
-                pi: "A.P.6.2: Protección da maternidade en situacións de risco"
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
             },
             propia_formacion: {
                 motivo: "Formación individual do traballador ou traballadora para a mellora do seu posto de traballo ou a súa promoción profesional",
@@ -597,8 +648,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Matrícula ou documentación acreditativa da actividade formativa",
-                normas: ["E. 23.4", "C. Artes Gráficas 8.3"],
-                pi: "A.P.5.1: Plan de formación continua e igualitaria"
+                normas: ["E. 23.4", "C. Artes Gráficas 8.3"]
             },
             propia_examen: {
                 motivo: "Asistencia a exames ou probas de selección para o acceso a empregos públicos ou a outras entidades",
@@ -607,8 +657,7 @@
                 tiempoDesplazamiento: "Máximo dunha xornada completa cando se precise desprazamento",
                 caracter: "retribuida",
                 justificante: "Convocatoria, citación ou documentación acreditativa das probas",
-                normas: ["E. 37.3", "C. Artes Gráficas 8.4.d"],
-                pi: "A.P.5.2: Apoio á promoción profesional e formación"
+                normas: ["E. 37.3", "C. Artes Gráficas 8.4.d"]
             },
             propia_traslado: {
                 motivo: "Traslado de domicilio habitual do traballador ou traballadora",
@@ -626,8 +675,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
-                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"],
-                pi: "A.P.8.1: Protocolo contra o acoso e violencia de xénero"
+                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"]
             },
             propia_donacion_sangre: {
                 motivo: "Doazón de sangue, órganos ou tecidos",
@@ -636,8 +684,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico ou documentación acreditativa da doazón",
-                normas: ["C. Artes Gráficas 8.4.f"],
-                pi: "A.P.7.2: Fomento da responsabilidade social e solidariedade"
+                normas: ["C. Artes Gráficas 8.4.f"]
             },
             propia_sindical: {
                 motivo: "Exercicio de funcións sindicais ou de representación dos traballadores e traballadoras",
@@ -646,8 +693,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Acreditación de cargo ou representación",
-                normas: ["E. 37.3", "C. Artes Gráficas 10"],
-                pi: "A.P.4.1: Impulso da representación paritaria"
+                normas: ["E. 37.3", "C. Artes Gráficas 10"]
             },
             
             // PARELLA
@@ -668,8 +714,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente ou con prestacións",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de familiares en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             pareja_violencia: {
                 motivo: "Asistencia á parella vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
@@ -678,8 +723,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
-                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"],
-                pi: "A.P.8.1: Protocolo contra o acoso e violencia de xénero"
+                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"]
             },
             pareja_fallecimiento: {
                 motivo: "Falecemento da parella, cónxuxe ou persoa con quen se cohabite",
@@ -688,8 +732,9 @@
                 tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción e, se é o caso, documentación acreditativa da parella de feito ou da convivencia",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
-                pi: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf para falecemento de familiares de primeiro grao de consanguinidade"
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                pi: "A.P.6.5",
+                piDetalle: "Ampliación do Convenio Colectivo: 3 días naturais (no lugar de 2) a partir do primeiro día hábil tras o feito causante. En caso de desprazamento >300km (ida+volta): ata 5 días naturais (no lugar de 4)."
             },
             
             // FILLA/O
@@ -709,8 +754,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de fillos/as en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             hijo_matrimonio: {
                 motivo: "Matrimonio do fillo ou filla",
@@ -737,8 +781,9 @@
                 tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
-                pi: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf para falecemento de familiares de primeiro grao de consanguinidade"
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                pi: "A.P.6.5",
+                piDetalle: "Ampliación do Convenio Colectivo: 3 días naturais (no lugar de 2) a partir do primeiro día hábil tras o feito causante. En caso de desprazamento >300km (ida+volta): ata 5 días naturais (no lugar de 4)."
             },
             
             // NAI / PAI
@@ -758,8 +803,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de ascendentes en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             padres_matrimonio: {
                 motivo: "Matrimonio do pai ou da nai (como fillo ou filla)",
@@ -778,8 +822,9 @@
                 tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
-                pi: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf para falecemento de familiares de primeiro grao de consanguinidade"
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                pi: "A.P.6.5",
+                piDetalle: "Ampliación do Convenio Colectivo: 3 días naturais (no lugar de 2) a partir do primeiro día hábil tras o feito causante. En caso de desprazamento >300km (ida+volta): ata 5 días naturais (no lugar de 4)."
             },
             
             // SOGROS
@@ -800,8 +845,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de familiares políticos en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             suegros_fallecimiento: {
                 motivo: "Falecemento do sogro ou da sogra",
@@ -810,8 +854,9 @@
                 tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
-                pi: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf. Inclúe os familiares por afinidade (familia política) e os consanguíneos da parella de feito"
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                pi: "A.P.6.5",
+                piDetalle: "Ampliación do Convenio Colectivo (aplicable a familiares políticos): 3 días naturais. Desprazamento >300km: ata 5 días."
             },
             
             // IRMÁNS
@@ -831,8 +876,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de irmáns en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             hermanos_matrimonio: {
                 motivo: "Matrimonio do irmán ou da irmá",
@@ -879,8 +923,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de netos/as en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             nietos_nacimiento: {
                 motivo: "Nacemento de neto ou neta (fillo ou filla do propio fillo ou filla)",
@@ -918,8 +961,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de avós/as en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             abuelos_fallecimiento: {
                 motivo: "Falecemento do avó ou da avoa",
@@ -948,8 +990,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados de xenros/noras en situación de dependencia ou enfermidade grave"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             yerno_nuera_fallecimiento: {
                 motivo: "Falecemento do xenro ou da nora",
@@ -969,8 +1010,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización e documentación acreditativa da dependencia e da convivencia",
-                normas: ["L.F. 10", "C. Artes Gráficas 7.2"],
-                pi: "A.P.6.6: Permiso por coidados de persoas conviventes dependentes"
+                normas: ["L.F. 10", "C. Artes Gráficas 7.2"]
             },
             convivente_enfermidade_grave: {
                 motivo: "Enfermidade grave, oncolóxica ou en coidados paliativos de persoa convivente dependente que non teña condición de familiar",
@@ -979,8 +1019,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida proporcionalmente",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos, e documentación da dependencia",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"],
-                pi: "A.P.6.6: Permiso por coidados prolongados de persoas conviventes dependentes"
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
             },
             convivente_fallecimiento: {
                 motivo: "Falecemento de persoa convivente dependente que non teña condición de familiar",
@@ -989,8 +1028,33 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción, certificado de convivencia ou empadroamento e documentación acreditativa da dependencia",
-                normas: ["L.F. 9", "C. Artes Gráficas 6.3"],
-                pi: "A.P.6.5: Falecemento de persoa convivente dependente"
+                normas: ["L.F. 9", "C. Artes Gráficas 6.3"]
+            },
+            
+            // EXCEDENCIA VOLUNTARIA ESPECIAL - A.P.6.6
+            propia_excedencia_voluntaria: {
+                motivo: "Excedencia voluntaria especial por falecemento de cónxuxe, parella de feito, fillos/as propios ou fillos/as da parella",
+                parentesco: "Propio (traballador/a afectado/a)",
+                tiempo: "Ata 3 meses (nos mesmos termos do artigo 9.1.2 do Convenio Colectivo). Respeto da antigüidade para os cómputos salariais correspondentes",
+                tiempoDesplazamiento: null,
+                caracter: "non retribuida (con reserva de posto e antigüidade)",
+                justificante: "Certificado de defunción e solicitude formal de excedencia voluntaria especial",
+                normas: ["E. 46", "C. Artes Gráficas 9.1.2"],
+                pi: "A.P.6.6",
+                piDetalle: "Ampliación do PI Vicusgraf: Posibilidade de excedencia voluntaria especial ata 3 meses (ultrapasa o que establece o Convenio). A empresa respectará a antigüidade para os cómputos salariais correspondentes durante este período."
+            },
+            
+            // BOLSA HORAS ACOMPAÑAMENTO MÉDICO - A.P.6.7
+            propia_bolsa_acompanamento: {
+                motivo: "Acompañamento a consultorio médico a descendentes menores de ata 14 anos ou a familiares de primeiro grao de consanguinidade que requiran dito acompañamento",
+                parentesco: "Propio (como proxenitor/a ou familiar coidador)",
+                tiempo: "Bolsa de 8 horas anuais retribuídas",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Documentación acreditativa da cita médica e, se é o caso, documentación que acredite a necesidade de acompañamento do familiar",
+                normas: ["C. Artes Gráficas (base para a ampliación)"],
+                pi: "A.P.6.7",
+                piDetalle: "Bolsa exclusiva do PI Vicusgraf: 8 horas anuais retribuídas específicas para acompañamento médico a menores de 14 anos ou familiares de primeiro grao de consanguinidade dependentes. Non incluída no Convenio Colectivo nin no ET."
             }
         };
 
@@ -1111,7 +1175,7 @@
             if (data.tiempoDesplazamiento) {
                 tiempoHtml = `
                     <tr>
-                        <td><strong>Tempo de ausencia:</strong></td>
+                        <td>TEMPO DE AUSENCIA:</td>
                         <td>
                             <div><strong>Sen desprazamento:</strong> ${data.tiempo}</div>
                             <div class="dias-desplazamiento"><strong>Con desprazamento >300km (ida+volta):</strong> ${data.tiempoDesplazamiento}</div>
@@ -1121,26 +1185,33 @@
             } else {
                 tiempoHtml = `
                     <tr>
-                        <td><strong>Tempo de ausencia:</strong></td>
+                        <td>TEMPO DE AUSENCIA:</td>
                         <td>${data.tiempo}</td>
                     </tr>
                 `;
             }
             
-            const notaHtml = data.nota ? `<div class="ley-familias"><strong>📌 Información adicional:</strong> ${data.nota}</div>` : '';
+            let piHtml = '';
+            if (data.pi === 'A.P.6.5' && data.piDetalle) {
+                piHtml = `<div class="pi-box"><strong>📋 Código de Acción Positiva A.P.6.5 (PI Vicusgraf):</strong> ${data.piDetalle}</div>`;
+            } else if (data.pi === 'A.P.6.6' && data.piDetalle) {
+                piHtml = `<div class="excedencia-box"><strong>📋 Código de Acción Positiva A.P.6.6 (PI Vicusgraf):</strong> ${data.piDetalle}</div>`;
+            } else if (data.pi === 'A.P.6.7' && data.piDetalle) {
+                piHtml = `<div class="bolsa-box"><strong>📋 Código de Acción Positiva A.P.6.7 (PI Vicusgraf):</strong> ${data.piDetalle}</div>`;
+            }
             
-            const piHtml = data.pi ? `<div class="pi-box"><strong>📋 Plan de Igualdade Vicusgraf:</strong> ${data.pi}</div>` : '';
+            const notaHtml = data.nota ? `<div class="ley-familias"><strong>📌 Información adicional:</strong> ${data.nota}</div>` : '';
             
             const html = `
                 <h2>Resultado da consulta</h2>
                 <table class="info-table">
                     <tr><th colspan="2">Información da ausencia</th></tr>
-                    <tr><td><strong>Motivo:</strong></td><td>${data.motivo}</td></tr>
-                    <tr><td><strong>Parentesco:</strong></td><td>${data.parentesco}</td></tr>
+                    <tr><td>MOTIVO:</td><td>${data.motivo}</td></tr>
+                    <tr><td>PARENTESCO:</td><td>${data.parentesco}</td></tr>
                     ${tiempoHtml}
-                    <tr><td><strong>Carácter:</strong></td><td><span class="badge ${badgeClass}">${badgeText}</span></td></tr>
-                    <tr><td><strong>Xustificante necesario:</strong></td><td>${data.justificante}</td></tr>
-                    <tr><td><strong>Normativa aplicable:</strong></td><td>${normasHtml}</td></tr>
+                    <tr><td>CARÁCTER:</td><td><span class="badge ${badgeClass}">${badgeText}</span></td></tr>
+                    <tr><td>XUSTIFICANTE:</td><td>${data.justificante}</td></tr>
+                    <tr><td>NORMATIVA:</td><td>${normasHtml}</td></tr>
                 </table>
                 ${piHtml}
                 ${notaHtml}
