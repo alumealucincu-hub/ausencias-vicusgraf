@@ -17,8 +17,8 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 10px;
-            font-size: 16px;
-            line-height: 1.5;
+            font-size: 18px;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
         
@@ -39,14 +39,14 @@
         }
         
         .header h1 {
-            font-size: 1.4em;
+            font-size: 1.5em;
             margin-bottom: 8px;
             font-weight: 600;
         }
         
         .header p {
             opacity: 0.9;
-            font-size: 0.9em;
+            font-size: 1em;
         }
         
         .form-section {
@@ -75,45 +75,41 @@
             display: block;
             font-weight: 600;
             color: #333;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            line-height: 1.4;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            line-height: 1.5;
             text-align: center;
         }
         
         .btn-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
-        }
-        
-        @media (min-width: 480px) {
-            .btn-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            gap: 12px;
         }
         
         .btn-option {
             width: 100%;
-            padding: 16px 12px;
+            padding: 20px 16px;
             border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border-radius: 12px;
             background: white;
             color: #333;
-            font-size: 0.95em;
+            font-size: 1.05em;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
             text-align: left;
             display: flex;
             align-items: center;
-            gap: 10px;
-            min-height: 56px;
+            justify-content: space-between;
+            min-height: 64px;
+            line-height: 1.4;
         }
         
         .btn-option:active {
             transform: scale(0.98);
             background: #f8f9fa;
+            border-color: #667eea;
         }
         
         .btn-option:hover {
@@ -121,37 +117,29 @@
             background: #f8f9ff;
         }
         
-        .btn-option .icon {
-            font-size: 1.3em;
-            flex-shrink: 0;
-        }
-        
-        .btn-option .text {
-            flex: 1;
-            line-height: 1.3;
-        }
-        
         .btn-option .arrow {
             color: #667eea;
-            font-size: 1.2em;
+            font-size: 1.4em;
+            margin-left: 10px;
+            flex-shrink: 0;
         }
         
         .back-btn {
             width: 100%;
-            padding: 14px;
+            padding: 16px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             background: #f0f0f0;
             color: #333;
-            font-size: 0.95em;
+            font-size: 1em;
             font-weight: 600;
             cursor: pointer;
-            margin-top: 15px;
+            margin-top: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            min-height: 48px;
+            min-height: 52px;
         }
         
         .back-btn:active {
@@ -160,15 +148,15 @@
         
         .print-btn {
             width: 100%;
-            padding: 16px;
+            padding: 18px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             background: #28a745;
             color: white;
-            font-size: 1em;
+            font-size: 1.05em;
             font-weight: 600;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -191,8 +179,8 @@
         
         .result h2 {
             color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-size: 1.3em;
             font-weight: 600;
             text-align: center;
         }
@@ -206,22 +194,23 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            font-size: 0.9em;
+            font-size: 1em;
         }
         
         .info-table th {
             background: #667eea;
             color: white;
-            padding: 14px;
+            padding: 16px;
             text-align: left;
             font-weight: 600;
-            font-size: 1em;
+            font-size: 1.05em;
         }
         
         .info-table td {
-            padding: 12px;
+            padding: 16px;
             border-bottom: 1px solid #e8e8e8;
             vertical-align: top;
+            line-height: 1.6;
         }
         
         .info-table tr:last-child td {
@@ -231,15 +220,15 @@
         .info-table td:first-child {
             font-weight: 600;
             color: #555;
-            width: 35%;
+            width: 30%;
             background: #fafafa;
         }
         
         .badge {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 8px 14px;
             border-radius: 20px;
-            font-size: 0.85em;
+            font-size: 0.95em;
             font-weight: 600;
             white-space: nowrap;
         }
@@ -263,40 +252,41 @@
             display: inline-block;
             background: #e3f2fd;
             color: #1976d2;
-            padding: 4px 8px;
+            padding: 5px 10px;
             border-radius: 6px;
-            font-size: 0.8em;
-            margin: 2px 4px 2px 0;
+            font-size: 0.9em;
+            margin: 3px 6px 3px 0;
             font-weight: 500;
         }
         
         .dias-desplazamiento {
             background: #f0f7ff;
             border-left: 3px solid #667eea;
-            padding: 10px;
-            margin-top: 8px;
-            border-radius: 6px;
-            font-size: 0.9em;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            line-height: 1.5;
         }
         
         .ley-familias {
             background: #e8f5e9;
             border-left: 4px solid #4caf50;
-            padding: 12px;
-            margin-top: 15px;
+            padding: 16px;
+            margin-top: 20px;
             border-radius: 8px;
-            font-size: 0.9em;
-            line-height: 1.5;
+            font-size: 0.95em;
+            line-height: 1.6;
         }
         
         .warning-box {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 12px;
-            margin-top: 15px;
+            padding: 16px;
+            margin-top: 20px;
             border-radius: 8px;
-            font-size: 0.85em;
-            line-height: 1.5;
+            font-size: 0.9em;
+            line-height: 1.6;
         }
         
         .progress-bar {
@@ -314,28 +304,37 @@
         }
         
         @media (max-width: 400px) {
-            .btn-option {
-                font-size: 0.9em;
-                padding: 14px 10px;
+            body {
+                font-size: 17px;
             }
             
-            .btn-option .icon {
-                font-size: 1.2em;
+            .btn-option {
+                font-size: 1em;
+                padding: 18px 14px;
+            }
+            
+            .info-table {
+                font-size: 0.95em;
+            }
+            
+            .info-table td {
+                padding: 14px;
             }
         }
         
         @media print {
-            body { background: white; padding: 0; }
+            body { background: white; padding: 0; font-size: 14px; }
             .container { box-shadow: none; max-width: 100%; }
             .btn-grid, .back-btn, .progress-bar { display: none; }
             .result { border-left: none; padding: 0; }
+            .info-table { font-size: 0.9em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📝 Consulta de Ausencias</h1>
+            <h1>Consulta de Ausencias Laborais</h1>
             <p>Vicusgraf - Hinojosa | Artes Gráficas</p>
         </div>
         
@@ -347,201 +346,542 @@
             <!-- PASO 1: Categorías principais -->
             <div class="step active" id="step1">
                 <div class="question">
-                    <span class="question-title">1. ¿Por quén ou por qué debes ausentarte?</span>
-                    <div class="btn-grid" id="categoriasContainer">
-                        <!-- Xerase dinámicamente -->
-                    </div>
+                    <span class="question-title">Por quén ou por qué debes ausentarte?</span>
+                    <div class="btn-grid" id="categoriasContainer"></div>
                 </div>
             </div>
             
             <!-- PASO 2: Subcategorías -->
             <div class="step" id="step2">
                 <div class="question">
-                    <span class="question-title" id="tituloSubcategorias">2. Selecciona a situación:</span>
-                    <div class="btn-grid" id="subcategoriasContainer">
-                        <!-- Xerase dinámicamente -->
-                    </div>
+                    <span class="question-title" id="tituloSubcategorias"></span>
+                    <div class="btn-grid" id="subcategoriasContainer"></div>
                 </div>
                 <button class="back-btn" onclick="goBack(1)">← Volver atrás</button>
             </div>
             
-            <!-- PASO 3: Detalles específicos (se é necesario) -->
+            <!-- PASO 3: Detalles específicos -->
             <div class="step" id="step3">
                 <div class="question">
-                    <span class="question-title" id="tituloDetalles">3. Especifica:</span>
-                    <div class="btn-grid" id="detallesContainer">
-                        <!-- Xerase dinámicamente -->
-                    </div>
+                    <span class="question-title" id="tituloDetalles"></span>
+                    <div class="btn-grid" id="detallesContainer"></div>
                 </div>
                 <button class="back-btn" onclick="goBack(2)">← Volver atrás</button>
             </div>
             
             <!-- RESULTADO -->
             <div class="step" id="resultado">
-                <div class="result" id="resultadoContent">
-                    <!-- O contido xerarase dinámicamente -->
-                </div>
-                <button class="print-btn" onclick="window.print()">🖨️ Imprimir / Gardar como PDF</button>
-                <button class="back-btn" onclick="resetForm()">🔄 Nova consulta</button>
+                <div class="result" id="resultadoContent"></div>
+                <button class="print-btn" onclick="window.print()">Imprimir / Gardar como PDF</button>
+                <button class="back-btn" onclick="resetForm()">Nova consulta</button>
             </div>
         </div>
     </div>
 
     <script>
-        // ESTRUCTURA DE CATEGORÍAS E SUBCATEGORÍAS
+        // CATEGORÍAS ORDENADAS POR GRAO DE PARENTESCO
+        // Deixando Falecemento para o final en cada categoría (orde psicolóxica)
         const categorias = {
-            propio: {
-                icono: "👤",
-                nombre: "PROPIO",
+            propia: {
+                nombre: "PROPIA",
                 subcategorias: {
-                    matrimonio: { icono: "💒", nombre: "Matrimonio ou parella de feito" },
-                    traslado: { icono: "🚚", nombre: "Traslado de domicilio" },
-                    formacion: { icono: "📚", nombre: "Formación individual" },
-                    examen: { icono: "📝", nombre: "Exames ou probas" },
-                    violencia: { icono: "🛡️", nombre: "Violencia de xénero" },
-                    sindical: { icono: "📢", nombre: "Funcións sindicais" }
+                    matrimonio: { nombre: "Matrimonio propio ou constituición de parella de feito" },
+                    nacimiento: { nombre: "Nacemento, adopción ou acollemento (permiso de maternidade ou paternidade)", requiereDetalle: true },
+                    lactancia: { nombre: "Permiso de lactancia por fillo ou filla propia", requiereDetalle: true },
+                    riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural" },
+                    formacion: { nombre: "Formación individual do traballador ou traballadora" },
+                    examen: { nombre: "Asistencia a exames ou probas de selección" },
+                    traslado: { nombre: "Traslado de domicilio habitual" },
+                    violencia: { nombre: "Asistencia como vítima de violencia de xénero" },
+                    sindical: { nombre: "Exercicio de funcións sindicais ou de representación" }
                 }
             },
             parella: {
-                icono: "💑",
-                nombre: "PARELLA",
+                nombre: "PARELLA (Cónxuxe ou parella de feito)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" },
-                    enfermidade_grave: { icono: "💊", nombre: "Enfermidade grave prolongada" },
-                    violencia: { icono: "🛡️", nombre: "Asistencia por violencia de xénero" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
+                    violencia: { nombre: "Asistencia por violencia de xénero" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             hijo: {
-                icono: "👶",
-                nombre: "FILLA/O",
+                nombre: "FILLA/O (Propios ou da parella)",
                 subcategorias: {
-                    nacimiento: { icono: "🍼", nombre: "Nacemento (permiso)", requiereDetalle: true },
-                    adopcion: { icono: "🏠", nombre: "Adopción/acollemento", requiereDetalle: true },
-                    lactancia: { icono: "🤱", nombre: "Lactancia", requiereDetalle: true },
-                    riesgo: { icono: "⚠️", nombre: "Risco embarazo/lactancia" },
-                    prematuro: { icono: "👶", nombre: "Nacemento prematuro" },
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" },
-                    enfermidade_grave: { icono: "💊", nombre: "Enfermidade grave prolongada" },
-                    matrimonio: { icono: "💒", nombre: "Matrimonio" },
-                    nieto_nacimiento: { icono: "👴", nombre: "Nacemento de neto/a (como avó)" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
+                    matrimonio: { nombre: "Matrimonio" },
+                    nacimiento_nieto: { nombre: "Nacemento de neto ou neta (como avó ou avoa)" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             padres: {
-                icono: "👴",
-                nombre: "NAI / PAI",
+                nombre: "NAI / PAI (Ascendentes)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" },
-                    enfermidade_grave: { icono: "💊", nombre: "Enfermidade grave prolongada" },
-                    matrimonio: { icono: "💒", nombre: "Matrimonio (como fillo)" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
+                    matrimonio: { nombre: "Matrimonio (como fillo ou filla)" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             suegros: {
-                icono: "👵",
-                nombre: "SOGRO",
+                nombre: "SOGROS (Ascendentes da parella)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" },
-                    enfermidade_grave: { icono: "💊", nombre: "Enfermidade grave prolongada" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             hermanos: {
-                icono: "👫",
-                nombre: "IRMÁN",
+                nombre: "IRMÁNS (Segundo grao)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" },
-                    matrimonio: { icono: "💒", nombre: "Matrimonio" },
-                    nacimiento_sobrino: { icono: "👶", nombre: "Nacemento de sobriño/a" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    matrimonio: { nombre: "Matrimonio" },
+                    nacimiento_sobrino: { nombre: "Nacemento de sobriño ou sobriña" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             nietos: {
-                icono: "👶",
-                nombre: "NETA/O",
+                nombre: "NETOS (Segundo grao - fillos de fillos)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" },
-                    nacimiento: { icono: "🍼", nombre: "Nacemento (como avó)" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    nacimiento: { nombre: "Nacemento (como avó ou avoa)" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             abuelos: {
-                icono: "👴",
-                nombre: "AVO/A",
+                nombre: "AVÓS (Segundo grao - pais de pais)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             yerno_nuera: {
-                icono: "👫",
-                nombre: "XENRO/NORA",
+                nombre: "XENRO / NORA (Segundo grao - parella de fillo ou filla)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización/enfermidade grave" }
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             },
             convivente: {
-                icono: "🏠",
-                nombre: "CONVIVENTE",
+                nombre: "CONVIVENTE (Persoa convivente dependente)",
                 subcategorias: {
-                    fallecimiento: { icono: "⚫", nombre: "Falecemento" },
-                    hospitalizacion: { icono: "🏥", nombre: "Hospitalización" },
-                    enfermidade_grave: { icono: "💊", nombre: "Enfermidade grave" }
+                    hospitalizacion: { nombre: "Hospitalización" },
+                    enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos" },
+                    fallecimiento: { nombre: "Falecemento" }
                 }
             }
         };
 
-        // DATOS DAS AUSENCIAS (simplificado, igual ca antes)
+        // DATOS COMPLETOS DAS AUSENCIAS
         const ausenciasData = {
-            // Aquí irían todos os datos das ausencias igual que na versión anterior
-            // Por brevedade, poño un exemplo e ti copias o resto da versión anterior
-            
-            propio_matrimonio: {
-                circunstancia: "Matrimonio do traballador/a ou parella de feito",
+            // PROPIA
+            propia_matrimonio: {
+                motivo: "Matrimonio do traballador ou traballadora ou constituición de parella de feito inscrita no rexistro correspondente",
                 parentesco: "Propio",
                 tiempo: "15 días naturais",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
-                justificante: "Certificado de matrimonio ou documentación de parella de feito",
+                justificante: "Certificado de matrimonio ou documentación acreditativa da parella de feito",
                 normas: ["E. 37.3.a", "C. Artes Gráficas 8.4.a"]
             },
-            
-            propio_traslado: {
-                circunstancia: "Traslado de domicilio habitual",
-                parentesco: "Propio",
-                tiempo: "1 día natural",
-                tiempoDesplazamiento: null,
-                caracter: "retribuida",
-                justificante: "Documentación acreditativa do cambio de domicilio",
-                normas: ["C. Artes Gráficas 8.4.e"]
-            },
-            
-            // ... (copiar todo o resto de ausenciasData da versión anterior)
-            
-            // Exemplo con detalle:
-            hijo_nacimiento_maternidade: {
-                circunstancia: "Nacemento de fillo/a",
-                parentesco: "Descendente (como nai)",
-                tiempo: "16 semanas ininterrompidas (6 obrigatorias inmediatas ao parto)",
+            propia_nacimiento_maternidade: {
+                motivo: "Nacemento de fillo ou filla",
+                parentesco: "Propio (como nai)",
+                tiempo: "16 semanas ininterrompidas, das cales 6 son obrigatorias inmediatamente posteriores ao parto",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
                 normas: ["E. 48.1", "L.F. 6.1", "C. Artes Gráficas 8.4.c"]
             },
-            
-            hijo_nacimiento_paternidade: {
-                circunstancia: "Nacemento de fillo/a",
-                parentesco: "Descendente (como pai)",
-                tiempo: "16 semanas ininterrompidas ou fraccionadas (transferibles 10 da nai)",
+            propia_nacimiento_paternidade: {
+                motivo: "Nacemento de fillo ou filla",
+                parentesco: "Propio (como pai)",
+                tiempo: "16 semanas ininterrompidas ou fraccionadas, das cales 10 poden ser transferidas da nai",
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
                 normas: ["E. 48.4", "L.F. 6.3", "C. Artes Gráficas 8.4.c"]
-            }
+            },
+            propia_lactancia_hora: {
+                motivo: "Lactancia de fillo ou filla menor de 9 meses, ou de 13 meses en caso de nacemento prematuro ou hospitalización prolongada",
+                parentesco: "Propio (pai ou nai)",
+                tiempo: "1 hora ao día, divisible en dúas fraccións, ou reducción da xornada en media hora, durante 9 meses (ou 13 en caso de prematuro)",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento",
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
+            },
+            propia_lactancia_acumulacion: {
+                motivo: "Acumulación do permiso de lactancia en días completos",
+                parentesco: "Propio (pai ou nai)",
+                tiempo: "15 días naturais (equivalentes a 12 días hábiles)",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento e solicitude de acumulación",
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
+            },
+            propia_riesgo: {
+                motivo: "Suspensión do contrato por risco durante o embarazo ou a lactancia natural",
+                parentesco: "Propio (traballadora embarazada ou nai lactante)",
+                tiempo: "Duración do risco, ata un máximo equivalente á prestación por maternidade",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida (por prestación do INSS)",
+                justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do feto",
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+            },
+            propia_formacion: {
+                motivo: "Formación individual do traballador ou traballadora para a mellora do seu posto de traballo ou a súa promoción profesional",
+                parentesco: "Propio",
+                tiempo: "20 horas anuais, acumulables ata un máximo de 100 horas (5 anos)",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Matrícula ou documentación acreditativa da actividade formativa",
+                normas: ["E. 23.4", "C. Artes Gráficas 8.3"]
+            },
+            propia_examen: {
+                motivo: "Asistencia a exames ou probas de selección para o acceso a empregos públicos ou a outras entidades",
+                parentesco: "Propio",
+                tiempo: "Horas necesarias para a realización das probas, cun máximo dunha xornada completa cando se precise desprazamento",
+                tiempoDesplazamiento: "Máximo dunha xornada completa cando se precise desprazamento",
+                caracter: "retribuida",
+                justificante: "Convocatoria, citación ou documentación acreditativa das probas",
+                normas: ["E. 37.3", "C. Artes Gráficas 8.4.d"]
+            },
+            propia_traslado: {
+                motivo: "Traslado de domicilio habitual do traballador ou traballadora",
+                parentesco: "Propio",
+                tiempo: "1 día natural",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Documentación acreditativa do cambio de domicilio (contrato de aluguer, escritura, etc.)",
+                normas: ["C. Artes Gráficas 8.4.e"]
+            },
+            propia_violencia: {
+                motivo: "Asistencia como vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
+                parentesco: "Propio",
+                tiempo: "Redución ou reordenación da xornada de traballo, ata un máximo de 6 meses prorrogables, ou permiso total",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
+                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"]
+            },
+            propia_sindical: {
+                motivo: "Exercicio de funcións sindicais ou de representación dos traballadores e traballadoras",
+                parentesco: "Propio (delegado ou delegada de persoal, membro do comité de empresa ou sindical)",
+                tiempo: "Horas mensuais establecidas no convenio: 1 hora para cada 50 traballadores ou traballadoras, ata un máximo de 15 horas mensuais",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Acreditación de cargo ou representación",
+                normas: ["E. 37.3", "C. Artes Gráficas 10"]
+            },
             
-            // ... continuar con todo o resto
+            // PARELLA
+            parella_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario da parella",
+                parentesco: "Cónxuxe, parella de feito ou persoa convivente que requira coidado efectivo",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"],
+                nota: "Reforma 2023: 5 días hábiles para todos os graos de parentesco. Inclúe parella de feito e persoas conviventes que requiran coidado efectivo"
+            },
+            parella_enfermidade_grave: {
+                motivo: "Enfermidade grave, oncolóxica ou en coidados paliativos da parella que requira coidados prolongados",
+                parentesco: "Cónxuxe, parella de feito ou persoa convivente",
+                tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida proporcionalmente ou con prestacións",
+                justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+            },
+            parella_violencia: {
+                motivo: "Asistencia á parella vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
+                parentesco: "Cónxuxe ou parella de feito",
+                tiempo: "Redución ou reordenación da xornada de traballo, ata un máximo de 6 meses prorrogables, ou permiso total",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
+                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"]
+            },
+            parella_fallecimiento: {
+                motivo: "Falecemento da parella, cónxuxe ou persoa con quen se cohabite",
+                parentesco: "Cónxuxe, parella de feito ou persoa convivente (1º grao)",
+                tiempo: "3 días naturais",
+                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción e, se é o caso, documentación acreditativa da parella de feito ou da convivencia",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
+                nota: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf para falecemento de familiares de primeiro grao de consanguinidade"
+            },
+            
+            // FILLA/O
+            hijo_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do fillo ou filla",
+                parentesco: "Descendente (fillo ou filla)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"]
+            },
+            hijo_enfermidade_grave: {
+                motivo: "Enfermidade grave, oncolóxica ou en coidados paliativos do fillo ou filla que requira coidados prolongados",
+                parentesco: "Descendente (fillo ou filla)",
+                tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida proporcionalmente",
+                justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+            },
+            hijo_matrimonio: {
+                motivo: "Matrimonio do fillo ou filla",
+                parentesco: "Descendente (fillo ou filla)",
+                tiempo: "1 día natural",
+                tiempoDesplazamiento: "2 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
+                normas: ["E. 37.3", "C. Artes Gráficas 10.1"]
+            },
+            hijo_nacimiento_nieto: {
+                motivo: "Nacemento de neto ou neta (fillo ou filla do propio fillo ou filla)",
+                parentesco: "Descendente en segundo grao (neto ou neta)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento",
+                normas: ["C. Artes Gráficas 10.2"]
+            },
+            hijo_fallecimiento: {
+                motivo: "Falecemento do fillo ou filla",
+                parentesco: "Descendente (fillo ou filla)",
+                tiempo: "3 días naturais",
+                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
+                nota: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf para falecemento de familiares de primeiro grao de consanguinidade"
+            },
+            
+            // NAI / PAI
+            padres_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do pai ou da nai",
+                parentesco: "Ascendente (pai ou nai)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"]
+            },
+            padres_enfermidade_grave: {
+                motivo: "Enfermidade grave, oncolóxica ou en coidados paliativos do pai ou da nai que requira coidados prolongados",
+                parentesco: "Ascendente (pai ou nai)",
+                tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida proporcionalmente",
+                justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+            },
+            padres_matrimonio: {
+                motivo: "Matrimonio do pai ou da nai (como fillo ou filla)",
+                parentesco: "Ascendente (pai ou nai)",
+                tiempo: "Non está recollido no Estatuto dos Traballadores nin no Convenio de Artes Gráficas",
+                tiempoDesplazamiento: null,
+                caracter: "no-retribuida",
+                justificante: "Non procede xustificante específico",
+                normas: ["Non recollido"],
+                nota: "O Estatuto dos Traballadores e o Convenio Colectivo de Artes Gráficas non recollen permiso retribuído polo matrimonio dos pais. Podería solicitarse como asuntos propios sen dereito a retribución, segundo negociación coa empresa"
+            },
+            padres_fallecimiento: {
+                motivo: "Falecemento do pai ou da nai",
+                parentesco: "Ascendente (pai ou nai)",
+                tiempo: "3 días naturais",
+                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
+                nota: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf para falecemento de familiares de primeiro grao de consanguinidade"
+            },
+            
+            // SOGROS
+            suegros_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do sogro ou da sogra",
+                parentesco: "Ascendente da parella (sogro ou sogra)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"],
+                nota: "Inclúe os familiares por afinidade (familia política) e os consanguíneos da parella de feito"
+            },
+            suegros_enfermidade_grave: {
+                motivo: "Enfermidade grave, oncolóxica ou en coidados paliativos do sogro ou da sogra que requira coidados prolongados",
+                parentesco: "Ascendente da parella (sogro ou sogra)",
+                tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida proporcionalmente",
+                justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+            },
+            suegros_fallecimiento: {
+                motivo: "Falecemento do sogro ou da sogra",
+                parentesco: "Ascendente da parella (sogro ou sogra)",
+                tiempo: "3 días naturais",
+                tiempoDesplazamiento: "5 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.1", "P.I. A.P.6.5"],
+                nota: "A.P.6.5: Código de Acción Positiva do Plan de Igualdade de Vicusgraf. Inclúe os familiares por afinidade (familia política) e os consanguíneos da parella de feito"
+            },
+            
+            // IRMÁNS
+            hermanos_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do irmán ou da irmá",
+                parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"]
+            },
+            hermanos_matrimonio: {
+                motivo: "Matrimonio do irmán ou da irmá",
+                parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
+                tiempo: "1 día natural",
+                tiempoDesplazamiento: "2 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
+                normas: ["E. 37.3", "C. Artes Gráficas 10.1"]
+            },
+            hermanos_nacimiento_sobrino: {
+                motivo: "Nacemento de sobriño ou sobriña (fillo ou filla do irmán ou da irmá)",
+                parentesco: "Segundo grao de consanguinidade (sobriño ou sobriña)",
+                tiempo: "1 día natural",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento",
+                normas: ["C. Artes Gráficas 10.2"]
+            },
+            hermanos_fallecimiento: {
+                motivo: "Falecemento do irmán ou da irmá",
+                parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
+            },
+            
+            // NETOS
+            nietos_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do neto ou da neta",
+                parentesco: "Segundo grao de consanguinidade (neto ou neta)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"]
+            },
+            nietos_nacimiento: {
+                motivo: "Nacemento de neto ou neta (fillo ou filla do propio fillo ou filla)",
+                parentesco: "Descendente en segundo grao (neto ou neta)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de nacemento",
+                normas: ["C. Artes Gráficas 10.2"]
+            },
+            nietos_fallecimiento: {
+                motivo: "Falecemento do neto ou da neta",
+                parentesco: "Segundo grao de consanguinidade (neto ou neta)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
+            },
+            
+            // AVÓS
+            abuelos_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do avó ou da avoa",
+                parentesco: "Segundo grao de consanguinidade (avó ou avoa)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"]
+            },
+            abuelos_fallecimiento: {
+                motivo: "Falecemento do avó ou da avoa",
+                parentesco: "Segundo grao de consanguinidade (avó ou avoa)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
+            },
+            
+            // XENRO / NORA
+            yerno_nuera_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do xenro ou da nora",
+                parentesco: "Segundo grao de afinidade (xenro ou nora, parella do fillo ou filla)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización, gravidade ou accidente, ou prescripción médica de reposo domiciliario",
+                normas: ["E. 37.3.b (RDL 5/2023)"]
+            },
+            yerno_nuera_fallecimiento: {
+                motivo: "Falecemento do xenro ou da nora",
+                parentesco: "Segundo grao de afinidade (xenro ou nora, parella do fillo ou filla)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
+            },
+            
+            // CONVIVENTE
+            convivente_hospitalizacion: {
+                motivo: "Hospitalización de persoa convivente dependente que non teña condición de familiar",
+                parentesco: "Persoa convivente dependente (sen parentesco)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico de hospitalización e documentación acreditativa da dependencia e da convivencia",
+                normas: ["L.F. 10", "C. Artes Gráficas 7.2"]
+            },
+            convivente_enfermidade_grave: {
+                motivo: "Enfermidade grave, oncolóxica ou en coidados paliativos de persoa convivente dependente que non teña condición de familiar",
+                parentesco: "Persoa convivente dependente (sen parentesco)",
+                tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida proporcionalmente",
+                justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos, e documentación da dependencia",
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+            },
+            convivente_fallecimiento: {
+                motivo: "Falecemento de persoa convivente dependente que non teña condición de familiar",
+                parentesco: "Persoa convivente dependente (sen parentesco)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Certificado de defunción, certificado de convivencia ou empadroamento e documentación acreditativa da dependencia",
+                normas: ["L.F. 9", "C. Artes Gráficas 6.3"]
+            }
+        };
+
+        // DETALLES ADICIONAIS PARA CASOS ESPECÍFICOS
+        const detallesOpciones = {
+            propia_nacimiento: {
+                maternidade: "Permiso de maternidade (como nai)",
+                paternidade: "Permiso de paternidade (como pai)"
+            },
+            propia_lactancia: {
+                hora: "Redución de xornada (1 hora ao día ou media hora)",
+                acumulacion: "Acumulación en días completos (15 días naturais)"
+            }
         };
 
         let currentStep = 1;
@@ -561,8 +901,7 @@
                 const btn = document.createElement('button');
                 btn.className = 'btn-option';
                 btn.innerHTML = `
-                    <span class="icon">${cat.icono}</span>
-                    <span class="text">${cat.nombre}</span>
+                    <span>${cat.nombre}</span>
                     <span class="arrow">›</span>
                 `;
                 btn.onclick = () => seleccionarCategoria(key);
@@ -575,7 +914,7 @@
             const categoria = categorias[key];
             
             document.getElementById('tituloSubcategorias').textContent = 
-                `2. Situación para: ${categoria.nombre}`;
+                `Selecciona a situación para: ${categoria.nombre}`;
             
             renderSubcategorias(categoria.subcategorias);
             showStep(2);
@@ -590,10 +929,7 @@
                 const btn = document.createElement('button');
                 btn.className = 'btn-option';
                 
-                let html = `
-                    <span class="icon">${sub.icono}</span>
-                    <span class="text">${sub.nombre}</span>
-                `;
+                let html = `<span>${sub.nombre}</span>`;
                 
                 if (sub.requiereDetalle) {
                     html += `<span class="arrow">›</span>`;
@@ -608,12 +944,10 @@
         function seleccionarSubcategoria(key, requiereDetalle) {
             seleccionSubcategoria = key;
             
-            if (requiereDetalle) {
-                // Mostrar paso 3 con opcións específicas
+            if (requiereDetalle && detallesOpciones[`${seleccionCategoria}_${key}`]) {
                 renderDetalles(key);
                 showStep(3);
             } else {
-                // Ir directo ao resultado
                 mostrarResultado(`${seleccionCategoria}_${key}`);
             }
         }
@@ -622,32 +956,15 @@
             const container = document.getElementById('detallesContainer');
             container.innerHTML = '';
             
-            // Definir detalles específicos para cada caso
-            const detalles = {
-                hijo_nacimiento: {
-                    maternidade: { icono: "👩", nombre: "Permiso de maternidade (como nai)" },
-                    paternidade: { icono: "👨", nombre: "Permiso de paternidade (como pai)" }
-                },
-                hijo_adopcion: {
-                    maternidade: { icono: "👩", nombre: "Permiso por adopción (como nai)" },
-                    paternidade: { icono: "👨", nombre: "Permiso por adopción (como pai)" }
-                },
-                hijo_lactancia: {
-                    hora: { icono: "⏰", nombre: "Redución de xornada (1 hora/día)" },
-                    acumulacion: { icono: "📅", nombre: "Acumulación en días (15 días)" }
-                }
-            };
+            const opciones = detallesOpciones[`${seleccionCategoria}_${subcategoriaKey}`] || {};
             
-            const opciones = detalles[subcategoriaKey] || {};
+            document.getElementById('tituloDetalles').textContent = 
+                `Especifica para: ${categorias[seleccionCategoria].subcategorias[subcategoriaKey].nombre}`;
             
             for (let key in opciones) {
-                const det = opciones[key];
                 const btn = document.createElement('button');
                 btn.className = 'btn-option';
-                btn.innerHTML = `
-                    <span class="icon">${det.icono}</span>
-                    <span class="text">${det.nombre}</span>
-                `;
+                btn.innerHTML = `<span>${opciones[key]}</span>`;
                 btn.onclick = () => mostrarResultado(`${seleccionCategoria}_${subcategoriaKey}_${key}`);
                 container.appendChild(btn);
             }
@@ -656,11 +973,10 @@
         function mostrarResultado(dataKey) {
             const data = ausenciasData[dataKey];
             if (!data) {
-                alert("Información non dispoñible temporalmente");
+                alert("Información non dispoñible. Por favor, contacta con Recursos Humanos.");
                 return;
             }
             
-            // Renderizar resultado (igual que na versión anterior)
             const badgeClass = data.caracter === 'retribuida' ? 'badge-retribuida' : 
                               data.caracter === 'no-retribuida' ? 'badge-no-retribuida' : 'badge-proporcional';
             
@@ -673,38 +989,38 @@
             if (data.tiempoDesplazamiento) {
                 tiempoHtml = `
                     <tr>
-                        <td><strong>Tempo:</strong></td>
+                        <td><strong>Tempo de ausencia:</strong></td>
                         <td>
                             <div><strong>Sen desprazamento:</strong> ${data.tiempo}</div>
-                            <div class="dias-desplazamiento"><strong>Con desprazamento >300km:</strong> ${data.tiempoDesplazamiento}</div>
+                            <div class="dias-desplazamiento"><strong>Con desprazamento >300km (ida+volta):</strong> ${data.tiempoDesplazamiento}</div>
                         </td>
                     </tr>
                 `;
             } else {
                 tiempoHtml = `
                     <tr>
-                        <td><strong>Tempo:</strong></td>
+                        <td><strong>Tempo de ausencia:</strong></td>
                         <td>${data.tiempo}</td>
                     </tr>
                 `;
             }
             
-            const notaHtml = data.nota ? `<div class="ley-familias"><strong>📌 Nota:</strong> ${data.nota}</div>` : '';
+            const notaHtml = data.nota ? `<div class="ley-familias"><strong>📌 Información adicional:</strong> ${data.nota}</div>` : '';
             
             const html = `
-                <h2>📋 Resultado da consulta</h2>
+                <h2>Resultado da consulta</h2>
                 <table class="info-table">
                     <tr><th colspan="2">Información da ausencia</th></tr>
-                    <tr><td><strong>Circunstancia:</strong></td><td>${data.circunstancia}</td></tr>
+                    <tr><td><strong>Motivo:</strong></td><td>${data.motivo}</td></tr>
                     <tr><td><strong>Parentesco:</strong></td><td>${data.parentesco}</td></tr>
                     ${tiempoHtml}
                     <tr><td><strong>Carácter:</strong></td><td><span class="badge ${badgeClass}">${badgeText}</span></td></tr>
-                    <tr><td><strong>Xustificante:</strong></td><td>${data.justificante}</td></tr>
-                    <tr><td><strong>Normativa:</strong></td><td>${normasHtml}</td></tr>
+                    <tr><td><strong>Xustificante necesario:</strong></td><td>${data.justificante}</td></tr>
+                    <tr><td><strong>Normativa aplicable:</strong></td><td>${normasHtml}</td></tr>
                 </table>
                 ${notaHtml}
                 <div class="warning-box">
-                    <strong>⚠️ Nota importante:</strong> Información orientativa baseada no Estatuto dos Traballadores (E.), Lei de Familias (L.F.), Convenio Colectivo de Artes Gráficas (C.) e Plan de Igualdade de Vicusgraf (P.I.).
+                    <strong>⚠️ Nota importante:</strong> Esta información é orientativa e ten carácter meramente informativo. En caso de dúbida ou para a xestión formal da ausencia, é imprescindible consultar co departamento de Recursos Humanos de Vicusgraf-Hinojosa. A normativa aplicable pode variar en función de actualizacións legais ou de convenio.
                 </div>
             `;
             
