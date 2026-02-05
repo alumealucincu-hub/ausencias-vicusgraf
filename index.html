@@ -71,9 +71,9 @@
             margin-bottom: 20px;
         }
         
-        /* FONDO PASTEL PARA O PRIMEIRO MENÚ */
+        /* FONDO PASTEL PARA O PRIMEIRO MENÚ - AZUL CLARO */
         .step-pastel {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            background: #e3f2fd;
             border-radius: 12px;
             padding: 25px 15px;
             margin: -20px -15px;
@@ -95,17 +95,23 @@
             gap: 12px;
         }
         
-        /* BOTÓNS CON FONDO PASTEL NO PRIMEIRO PASO */
+        /* BOTÓNS CON FONDO PASTEL PLANO - VERDE MENTA */
         .btn-pastel {
-            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%) !important;
-            border: 2px solid #90caf9 !important;
-            box-shadow: 0 4px 15px rgba(144, 202, 249, 0.3) !important;
+            background: #e0f2f1 !important;
+            border: 2px solid #80cbc4 !important;
+            box-shadow: 0 2px 8px rgba(128, 203, 196, 0.3) !important;
+            color: #00695c !important;
         }
         
         .btn-pastel:hover {
-            background: linear-gradient(135deg, #bbdefb 0%, #e1bee7 100%) !important;
-            border-color: #64b5f6 !important;
+            background: #b2dfdb !important;
+            border-color: #4db6ac !important;
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(77, 182, 172, 0.4) !important;
+        }
+        
+        .btn-pastel .arrow {
+            color: #00897b !important;
         }
         
         .btn-option {
@@ -300,18 +306,6 @@
             color: #ff9800;
             font-weight: bold;
             font-size: 1.2em;
-        }
-        
-        /* NOTA INFORMATIVA SOBRE DISCONTINUIDADE */
-        .nota-discontinuidad {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 16px;
-            margin: 15px 0;
-            border-radius: 8px;
-            font-size: 0.95em;
-            line-height: 1.5;
-            color: #1565c0;
         }
         
         .norma-tag {
@@ -584,7 +578,14 @@
                     hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
                     enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
                     matrimonio: { nombre: "Matrimonio" },
-                    nacimiento_sobrino: { nombre: "Nacemento de sobriño ou sobriña" },
+                    fallecimiento: { nombre: "Falecemento" }
+                }
+            },
+            cuñados: {
+                nombre: "CUÑADA/O (Segundo grao afinidade)",
+                subcategorias: {
+                    hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
+                    enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
                     fallecimiento: { nombre: "Falecemento" }
                 }
             },
@@ -606,7 +607,7 @@
                 }
             },
             yerno_nuera: {
-                nombre: "XENRO / NORA (Segundo grao - parella de fillo ou filla)",
+                nombre: "XENRO / NORA (Segundo grao afinidade - parella de fillo ou filla)",
                 subcategorias: {
                     hospitalizacion: { nombre: "Accidente, enfermidade grave, hospitalización ou intervención cirúrxica sen hospitalización que precise reposo domiciliario" },
                     enfermidade_grave: { nombre: "Enfermidade grave, oncolóxica ou en coidados paliativos que requira coidados prolongados" },
@@ -623,7 +624,7 @@
             }
         };
 
-        // DATOS COMPLETOS DAS AUSENCIAS
+        // DATOS COMPLETOS DAS AUSENCIAS - CORREGIDO
         const ausenciasData = {
             // PROPIA
             propia_matrimonio: {
@@ -876,7 +877,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["C. Artes Gráficas 10.2"]
+                normas: ["E. 37.3", "C. Artes Gráficas 8.4.a (por analogía)"]
             },
             hijo_fallecimiento: {
                 motivo: "Falecemento do fillo ou filla",
@@ -990,7 +991,7 @@
                 piDetalle: "Ampliación do Convenio Colectivo (aplicable a familiares políticos): 3 días naturais. Desprazamento >300km: ata 5 días."
             },
             
-            // IRMÁNS
+            // IRMÁNS - ELIMINADO SOBRIÑOS
             hermanos_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do irmán ou da irmá",
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
@@ -1021,15 +1022,6 @@
                 justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
                 normas: ["E. 37.3", "C. Artes Gráficas 10.1"]
             },
-            hermanos_nacimiento_sobrino: {
-                motivo: "Nacemento de sobriño ou sobriña (fillo ou filla do irmán ou da irmá)",
-                parentesco: "Segundo grao de consanguinidade (sobriño ou sobriña)",
-                tiempo: "1 día natural",
-                tiempoDesplazamiento: null,
-                caracter: "retribuida",
-                justificante: "Certificado de nacemento",
-                normas: ["C. Artes Gráficas 10.2"]
-            },
             hermanos_fallecimiento: {
                 motivo: "Falecemento do irmán ou da irmá",
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
@@ -1038,6 +1030,39 @@
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 6.2"]
+            },
+            
+            // CUÑADOS/A - NOVA CATEGORÍA
+            cuñados_hospitalizacion: {
+                motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do cuñado ou da cuñada",
+                parentesco: "Segundo grao de afinidade (cuñado ou cuñada, parella do irmán ou da irmá)",
+                tiempo: "5 días hábiles",
+                tiempoDesplazamiento: null,
+                caracter: "retribuida",
+                justificante: "Informe médico que acredite: hospitalización/gravidade/accidente OU prescripción de reposo domiciliario. O alta hospitalaria ou médica non extingue o permiso se persiste a necesidade de coidados (reposo domiciliario prescrito). Non é necesario dispor os 5 días de forma seguida.",
+                normas: ["E. 37.3.b (RDL 5/2023)", "STS 6/05/2025", "Sentenza Xulgado Social nº7 Vigo 17/12/2025"],
+                nota: "Segundo grao de afinidade: cónyuge da persoa unida por parentesco de consanguinidade (parella do irmán/irmá). Segundo a doutrina do Tribunal Supremo e a Sentenza do Xulgado do Social nº7 de Vigo: O permiso non remata co alta hospitalaria nin co alta médica, senón cando desaparece a necesidade de coidados.",
+                requiereExplicacion: true,
+                textoExplicacion: "O permiso continúa despois do alta hospitalaria e/ou médica sempre que o facultativo prescriba reposo domiciliario. Os días non precisan ser seguidos."
+            },
+            cuñados_enfermidade_grave: {
+                motivo: "Enfermidade grave, oncolóxica ou en coidados paliativos do cuñado ou da cuñada que requira coidados prolongados",
+                parentesco: "Segundo grao de afinidade (cuñado ou cuñada, parella do irmán ou da irmá)",
+                tiempo: "Redución da xornada de traballo entre un oitavo e a metade, ou permiso, segundo o caso",
+                tiempoDesplazamiento: null,
+                caracter: "proporcional",
+                justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
+                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+            },
+            cuñados_fallecimiento: {
+                motivo: "Falecemento do cuñado ou da cuñada",
+                parentesco: "Segundo grao de afinidade (cuñado ou cuñada, parella do irmán ou da irmá)",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: "4 días naturais cando o percorrido de ida e volta supere os 300 quilómetros",
+                caracter: "retribuida",
+                justificante: "Certificado de defunción e documentación que acredite o parentesco (por exemplo, certificado de matrimonio do irmán/irmá)",
+                normas: ["E. 37.3", "C. Artes Gráficas 6.2"],
+                nota: "Segundo grao de afinidade. O Convenio de Artes Gráficas non distingue entre consanguinidade e afinidade para o permiso por falecemento de 2º grao."
             },
             
             // NETOS
@@ -1069,7 +1094,7 @@
                 tiempoDesplazamiento: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["C. Artes Gráficas 10.2"]
+                normas: ["E. 37.3", "C. Artes Gráficas 8.4.a (por analogía)"]
             },
             nietos_fallecimiento: {
                 motivo: "Falecemento do neto ou da neta",
