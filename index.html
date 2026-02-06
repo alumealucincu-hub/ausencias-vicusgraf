@@ -529,6 +529,7 @@
                 nombre: "PROPIA",
                 subcategorias: {
                     matrimonio: { nombre: "Matrimonio propio ou constituición de parella de feito" },
+                    consulta_medica: { nombre: "Asistencia a consulta médica propia" },
                     riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural", requiereDetalle: true },
                     formacion: { nombre: "Formación individual do traballador ou traballadora" },
                     examen: { nombre: "Asistencia a exames ou probas de selección" },
@@ -645,7 +646,17 @@
                 inicio: "A partir do primeiro día hábil tras o feito causante",
                 caracter: "retribuida",
                 justificante: "Certificado de matrimonio ou documentación acreditativa da parella de feito",
-                normas: ["E. 37.3.a", "C. Artes Gráficas 8.4.a"]
+                normas: ["E. 37.3.a", "C. Artes Gráficas 8.5.1.a"]
+            },
+            propia_consulta_medica: {
+                motivo: "Asistencia a consulta médica propia",
+                parentesco: "Propio",
+                tiempo: "O tempo indispensable para a asistencia, sen perda de retribución",
+                tiempoDesplazamiento: null,
+                inicio: null,
+                caracter: "retribuida",
+                justificante: "Cita médica ou informe acreditativo da asistencia",
+                normas: ["C. Artes Gráficas 8.5.1.d"]
             },
             propia_riesgo_embarazo: {
                 motivo: "Suspensión do contrato por risco durante o embarazo",
@@ -655,7 +666,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do feto",
-                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 6.2.1"]
             },
             propia_riesgo_lactancia: {
                 motivo: "Suspensión do contrato por risco durante a lactancia natural",
@@ -665,7 +676,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do lactante",
-                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 6.2.1"]
             },
             propia_formacion: {
                 motivo: "Formación individual do traballador ou traballadora para a mellora do seu posto de traballo ou a súa promoción profesional",
@@ -675,7 +686,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Matrícula ou documentación acreditativa da actividade formativa",
-                normas: ["E. 23.4", "C. Artes Gráficas 8.3"]
+                normas: ["E. 23.4", "C. Artes Gráficas 6.4.3.4"]
             },
             propia_examen: {
                 motivo: "Asistencia a exames ou probas de selección para o acceso a empregos públicos ou a outras entidades",
@@ -685,7 +696,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Convocatoria, citación ou documentación acreditativa das probas",
-                normas: ["E. 37.3", "C. Artes Gráficas 8.4.d"]
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.d"]
             },
             propia_traslado: {
                 motivo: "Traslado de domicilio habitual do traballador ou traballadora",
@@ -695,7 +706,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Documentación acreditativa do cambio de domicilio (contrato de aluguer, escritura, etc.)",
-                normas: ["C. Artes Gráficas 8.4.e"]
+                normas: ["C. Artes Gráficas 8.5.1.e"]
             },
             propia_violencia: {
                 motivo: "Asistencia como vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
@@ -705,7 +716,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
-                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"]
+                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12.3"]
             },
             propia_donacion_sangre: {
                 motivo: "Doazón de sangue, órganos ou tecidos",
@@ -715,7 +726,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Informe médico ou documentación acreditativa da doazón",
-                normas: ["C. Artes Gráficas 8.4.f"]
+                normas: ["C. Artes Gráficas 8.5.1.f"]
             },
             propia_sindical: {
                 motivo: "Exercicio de funcións sindicais ou de representación dos traballadores e traballadoras",
@@ -736,7 +747,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Comunicación de extinción do contrato e, se é o caso, solicitude formal das horas",
-                normas: ["C. Artes Gráficas 5.3.2"],
+                normas: ["E. 5.3.2"],
                 nota: "Durante o período de preaviso por extinción do contrato, a persoa traballadora afectada ten dereito a 6 horas semanais retribuídas para busca de emprego. Estas horas poden ser fraccionadas e dispóñense durante a xornada laboral."
             },
             
@@ -762,7 +773,7 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             pareja_violencia: {
                 motivo: "Asistencia á parella vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
@@ -772,7 +783,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Orde de protección, denuncia ante as autoridades competentes ou informe dos servizos sociais",
-                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12"]
+                normas: ["E. 48.4", "L.F. 18", "C. Artes Gráficas 12.3"]
             },
             pareja_fallecimiento: {
                 motivo: "Falecemento da parella, cónxuxe ou persoa con quen se cohabite",
@@ -782,7 +793,7 @@
                 inicio: "A partir do primeiro día hábil tras o feito causante",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción e, se é o caso, documentación acreditativa da parella de feito ou da convivencia",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 pi: "A.P.6.5",
                 piDetalle: "Ampliación do Convenio Colectivo: 3 días naturais (no lugar de 2) a partir do primeiro día hábil tras o feito causante. En caso de desprazamento >300km (ida+volta): ata 5 días naturais (no lugar de 4).",
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
@@ -809,7 +820,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 48.1", "L.F. 6.1", "C. Artes Gráficas 8.4.c"]
+                normas: ["E. 48.1", "L.F. 6.1", "C. Artes Gráficas 8.5.1.c"]
             },
             hijo_nacimiento_paternidade: {
                 motivo: "Nacemento de fillo ou filla",
@@ -819,7 +830,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 48.4", "L.F. 6.3", "C. Artes Gráficas 8.4.c"]
+                normas: ["E. 48.4", "L.F. 6.3", "C. Artes Gráficas 8.5.1.c"]
             },
             hijo_lactancia_hora: {
                 motivo: "Lactancia de fillo ou filla menor de 9 meses, ou de 13 meses en caso de nacemento prematuro ou hospitalización prolongada",
@@ -829,7 +840,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 8.5.2"]
             },
             hijo_lactancia_acumulacion: {
                 motivo: "Acumulación do permiso de lactancia en días completos",
@@ -839,7 +850,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento e solicitude de acumulación",
-                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 5.4"]
+                normas: ["E. 37.4", "L.F. 8", "C. Artes Gráficas 8.5.2"]
             },
             hijo_riesgo_embarazo: {
                 motivo: "Suspensión do contrato por risco durante o embarazo",
@@ -849,7 +860,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do feto",
-                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 6.2.1"]
             },
             hijo_riesgo_lactancia: {
                 motivo: "Suspensión do contrato por risco durante a lactancia natural",
@@ -859,7 +870,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do lactante",
-                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 5.3"]
+                normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 6.2.1"]
             },
             hijo_bolsa_medico: {
                 motivo: "Acompañamento a consultorio médico a descendentes menores de ata 14 anos ou a familiares de primeiro grao de consanguinidade que requiran dito acompañamento",
@@ -894,7 +905,7 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             hijo_matrimonio: {
                 motivo: "Matrimonio do fillo ou filla",
@@ -904,7 +915,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
-                normas: ["E. 37.3", "C. Artes Gráficas 10.1"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.g"],
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             hijo_nacimiento_nieto: {
@@ -915,7 +926,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 37.3", "C. Artes Gráficas 8.4.a (por analogía)"]
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.a (por analogía)"]
             },
             hijo_fallecimiento: {
                 motivo: "Falecemento do fillo ou filla",
@@ -925,7 +936,7 @@
                 inicio: "A partir do primeiro día hábil tras o feito causante",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 pi: "A.P.6.5",
                 piDetalle: "Ampliación do Convenio Colectivo: 3 días naturais (no lugar de 2) a partir do primeiro día hábil tras o feito causante. En caso de desprazamento >300km (ida+volta): ata 5 días naturais (no lugar de 4).",
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
@@ -977,7 +988,7 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             padres_matrimonio: {
                 motivo: "Matrimonio do pai ou da nai (como fillo ou filla)",
@@ -998,7 +1009,7 @@
                 inicio: "A partir do primeiro día hábil tras o feito causante",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 pi: "A.P.6.5",
                 piDetalle: "Ampliación do Convenio Colectivo: 3 días naturais (no lugar de 2) a partir do primeiro día hábil tras o feito causante. En caso de desprazamento >300km (ida+volta): ata 5 días naturais (no lugar de 4).",
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
@@ -1026,7 +1037,7 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             suegros_fallecimiento: {
                 motivo: "Falecemento do sogro ou da sogra",
@@ -1036,7 +1047,7 @@
                 inicio: "A partir do primeiro día hábil tras o feito causante",
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.1"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 pi: "A.P.6.5",
                 piDetalle: "Ampliación do Convenio Colectivo (aplicable a familiares políticos): 3 días naturais. Desprazamento >300km: ata 5 días.",
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
@@ -1064,7 +1075,7 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             hermanos_matrimonio: {
                 motivo: "Matrimonio do irmán ou da irmá",
@@ -1074,7 +1085,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
-                normas: ["E. 37.3", "C. Artes Gráficas 10.1"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.g"],
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             hermanos_fallecimiento: {
@@ -1082,10 +1093,10 @@
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
                 tiempo: "2 días naturais",
                 tiempoDesplazamiento: "4 días naturais*",
-                inicio: "A partir do primeiro día hábil tras o feito causante",
+                inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.2"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             
@@ -1111,17 +1122,17 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             cuñados_fallecimiento: {
                 motivo: "Falecemento do cuñado ou da cuñada",
                 parentesco: "Segundo grao de afinidade (cuñado ou cuñada, parella do irmán ou da irmá)",
                 tiempo: "2 días naturais",
                 tiempoDesplazamiento: "4 días naturais*",
-                inicio: "A partir do primeiro día hábil tras o feito causante",
+                inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción e documentación que acredite o parentesco (por exemplo, certificado de matrimonio do irmán/irmá)",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.2"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 nota: "Segundo grao de afinidade. O Convenio de Artes Gráficas non distingue entre consanguinidade e afinidade para o permiso por falecemento de 2º grao.",
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
@@ -1148,7 +1159,7 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             nietos_nacimiento: {
                 motivo: "Nacemento de neto ou neta (fillo ou filla do propio fillo ou filla)",
@@ -1158,17 +1169,17 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de nacemento",
-                normas: ["E. 37.3", "C. Artes Gráficas 8.4.a (por analogía)"]
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.a (por analogía)"]
             },
             nietos_fallecimiento: {
                 motivo: "Falecemento do neto ou da neta",
                 parentesco: "Segundo grao de consanguinidade (neto ou neta)",
                 tiempo: "2 días naturais",
                 tiempoDesplazamiento: "4 días naturais*",
-                inicio: "A partir do primeiro día hábil tras o feito causante",
+                inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.2"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             
@@ -1194,17 +1205,17 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             abuelos_fallecimiento: {
                 motivo: "Falecemento do avó ou da avoa",
                 parentesco: "Segundo grao de consanguinidade (avó ou avoa)",
                 tiempo: "2 días naturais",
                 tiempoDesplazamiento: "4 días naturais*",
-                inicio: "A partir do primeiro día hábil tras o feito causante",
+                inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.2"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             
@@ -1230,17 +1241,17 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             yerno_nuera_fallecimiento: {
                 motivo: "Falecemento do xenro ou da nora",
                 parentesco: "Segundo grao de afinidade (xenro ou nora, parella do fillo ou filla)",
                 tiempo: "2 días naturais",
                 tiempoDesplazamiento: "4 días naturais*",
-                inicio: "A partir do primeiro día hábil tras o feito causante",
+                inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
-                normas: ["E. 37.3", "C. Artes Gráficas 6.2"],
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             
@@ -1253,7 +1264,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Informe médico de hospitalización e documentación acreditativa da dependencia e da convivencia. O alta hospitalaria ou médica non extingue o permiso se persiste a necesidade de coidados (reposo domiciliario prescrito). Non é necesario dispor os 5 días de forma seguida.",
-                normas: ["L.F. 10", "C. Artes Gráficas 7.2", "STS 6/05/2025", "Sentenza Xulgado Social nº7 Vigo 17/12/2025"],
+                normas: ["L.F. 10", "C. Artes Gráficas 8.5.1.b", "STS 6/05/2025", "Sentenza Xulgado Social nº7 Vigo 17/12/2025"],
                 nota: "Segundo a doutrina do Tribunal Supremo: O permiso non remata co alta hospitalaria nin co alta médica, senón cando desaparece a necesidade de coidados. Os 5 días non deben ser necesariamente seguidos.",
                 requiereExplicacion: true,
                 textoExplicacion: "O permiso continúa despois do alta hospitalaria e/ou médica sempre que o facultativo prescriba reposo domiciliario. Os días non precisan ser seguidos."
@@ -1266,7 +1277,7 @@
                 inicio: null,
                 caracter: "proporcional",
                 justificante: "Informe médico que acredite a gravidade, o carácter oncolóxico ou os coidados paliativos, e documentación da dependencia",
-                normas: ["L.F. 11", "C. Artes Gráficas 7.3"]
+                normas: ["L.F. 11", "C. Artes Gráficas 8.5.1.b"]
             },
             convivente_fallecimiento: {
                 motivo: "Falecemento de persoa convivente dependente que non teña condición de familiar",
@@ -1276,7 +1287,7 @@
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción, certificado de convivencia ou empadroamento e documentación acreditativa da dependencia",
-                normas: ["L.F. 9", "C. Artes Gráficas 6.3"]
+                normas: ["L.F. 9", "C. Artes Gráficas 8.5.1.c"]
             }
         };
 
