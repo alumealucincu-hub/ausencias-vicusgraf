@@ -14,7 +14,7 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #113300;
             min-height: 100vh;
             padding: 10px;
             font-size: 18px;
@@ -25,17 +25,18 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
+            background: #113300;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             overflow: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a4400;
             color: white;
             padding: 20px 15px;
             text-align: center;
+            border-bottom: 2px solid #2d5500;
         }
         
         .header h1 {
@@ -51,6 +52,7 @@
         
         .form-section {
             padding: 20px 15px;
+            background: #113300;
         }
         
         .step {
@@ -71,9 +73,9 @@
             margin-bottom: 20px;
         }
         
-        /* FONDO PASTEL PARA O PRIMEIRO MENÚ - AZUL CLARO */
+        /* FONDO UNIFICADO #113300 */
         .step-pastel {
-            background: #e3f2fd;
+            background: #113300;
             border-radius: 12px;
             padding: 25px 15px;
             margin: -20px -15px;
@@ -82,7 +84,7 @@
         .question-title {
             display: block;
             font-weight: 600;
-            color: #333;
+            color: #e8f5e9;
             margin-bottom: 20px;
             font-size: 1.2em;
             line-height: 1.5;
@@ -95,16 +97,16 @@
             gap: 12px;
         }
         
-        /* BOTÓNS CON FONDO PASTEL PLANO - VERDE MENTA MÁIS CLARO */
+        /* BOTÓNS CON FONDO PASTEL VERDE MENTA */
         .btn-pastel {
-            background: #f1f8e9 !important;
+            background: #dcedc8 !important;
             border: 2px solid #aed581 !important;
             box-shadow: 0 2px 8px rgba(174, 213, 129, 0.3) !important;
             color: #33691e !important;
         }
         
         .btn-pastel:hover {
-            background: #dcedc8 !important;
+            background: #c5e1a5 !important;
             border-color: #9ccc65 !important;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(156, 204, 101, 0.4) !important;
@@ -117,10 +119,10 @@
         .btn-option {
             width: 100%;
             padding: 20px 16px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #4a7c59;
             border-radius: 12px;
-            background: white;
-            color: #333;
+            background: #e8f5e9;
+            color: #1b5e20;
             font-size: 1.05em;
             font-weight: 500;
             cursor: pointer;
@@ -136,17 +138,17 @@
         
         .btn-option:active {
             transform: scale(0.98);
-            background: #f8f9fa;
-            border-color: #667eea;
+            background: #c8e6c9;
+            border-color: #2e7d32;
         }
         
         .btn-option:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
+            border-color: #2e7d32;
+            background: #c8e6c9;
         }
         
         .btn-option .arrow {
-            color: #667eea;
+            color: #2e7d32;
             font-size: 1.4em;
             margin-left: 10px;
             flex-shrink: 0;
@@ -157,8 +159,8 @@
             padding: 16px;
             border: none;
             border-radius: 12px;
-            background: #f0f0f0;
-            color: #333;
+            background: #2d5500;
+            color: #e8f5e9;
             font-size: 1em;
             font-weight: 600;
             cursor: pointer;
@@ -168,10 +170,11 @@
             justify-content: center;
             gap: 8px;
             min-height: 52px;
+            border: 2px solid #4a7c59;
         }
         
         .back-btn:active {
-            background: #e0e0e0;
+            background: #1a4400;
         }
         
         .print-btn {
@@ -179,7 +182,7 @@
             padding: 18px;
             border: none;
             border-radius: 12px;
-            background: #28a745;
+            background: #2e7d32;
             color: white;
             font-size: 1.05em;
             font-weight: 600;
@@ -189,27 +192,27 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
         
         .print-btn:active {
-            background: #218838;
+            background: #1b5e20;
             transform: scale(0.98);
         }
         
-        /* RESULTADO CON TÍTULOS AUMENTADOS */
+        /* RESULTADO CON FONDO PASTEL */
         .result {
-            background: #f8f9fa;
+            background: #f1f8e9;
             border-radius: 12px;
             padding: 20px 15px;
             margin-top: 15px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #689f38;
         }
         
         .result-section {
             margin-bottom: 28px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #c5e1a5;
         }
         
         .result-section:last-of-type {
@@ -222,7 +225,7 @@
             display: block;
             font-size: 1.1em;
             font-weight: 700;
-            color: #667eea;
+            color: #33691e;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             margin-bottom: 12px;
@@ -231,27 +234,28 @@
         
         .result-content {
             font-size: 1.15em;
-            color: #222;
+            color: #1b5e20;
             line-height: 1.6;
             font-weight: 400;
         }
         
         .result-content strong {
-            color: #333;
+            color: #2e7d32;
             font-weight: 600;
         }
         
-        /* CLAIM SEN DEGRADADO - COR PLANA */
+        /* CLAIMS CON TONOS PASTEL ARMÓNICOS */
         .claim-container {
-            background: #667eea;
+            background: #a5d6a7;
             border-radius: 15px;
             padding: 25px 20px;
             margin: 15px 0;
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+            box-shadow: 0 6px 20px rgba(102, 187, 106, 0.35);
+            border: 2px solid #81c784;
         }
         
         .claim-inicio {
-            color: rgba(255,255,255,0.9);
+            color: rgba(27, 94, 32, 0.9);
             font-size: 0.95em;
             font-weight: 500;
             text-align: center;
@@ -260,7 +264,7 @@
         }
         
         .claim-dias {
-            color: white;
+            color: #1b5e20;
             font-size: 1.4em;
             font-weight: 700;
             text-align: center;
@@ -268,33 +272,37 @@
         }
         
         .claim-dias-secundario {
-            color: white;
+            color: #2e7d32;
             font-size: 1.4em;
             font-weight: 700;
             text-align: center;
             line-height: 1.4;
             margin-top: 8px;
+            background: rgba(255,255,255,0.4);
+            padding: 8px;
+            border-radius: 8px;
         }
         
         .claim-desplazamiento {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.3);
             border-radius: 10px;
             padding: 15px;
             margin-top: 15px;
-            color: white;
+            color: #1b5e20;
             font-size: 1.1em;
             line-height: 1.5;
+            border: 1px solid rgba(255,255,255,0.5);
         }
         
         .claim-caracter {
             display: block;
             text-align: center;
-            color: rgba(255,255,255,0.95);
+            color: #1b5e20;
             font-size: 1.1em;
             font-weight: 600;
             margin-top: 15px;
             padding-top: 15px;
-            border-top: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid rgba(27, 94, 32, 0.3);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -320,25 +328,26 @@
         
         .norma-tag {
             display: inline-block;
-            background: #e3f2fd;
-            color: #1976d2;
+            background: #c8e6c9;
+            color: #2e7d32;
             padding: 6px 12px;
             border-radius: 6px;
             font-size: 0.9em;
             margin: 4px 4px 4px 0;
             font-weight: 600;
+            border: 1px solid #a5d6a7;
         }
         
-        /* Cajas especiales */
+        /* Cajas especiales con tonos pastel */
         .pi-box {
-            background: #fff8e1;
+            background: #fff3e0;
             border-left: 4px solid #ff9800;
             padding: 16px;
             margin: 20px 0;
             border-radius: 8px;
             font-size: 0.95em;
             line-height: 1.5;
-            color: #333;
+            color: #e65100;
         }
         
         .pi-box strong {
@@ -349,30 +358,30 @@
         
         .excedencia-box {
             background: #fce4ec;
-            border-left: 4px solid #e91e63;
+            border-left: 4px solid #f48fb1;
             padding: 16px;
             margin: 20px 0;
             border-radius: 8px;
             font-size: 0.95em;
             line-height: 1.5;
-            color: #333;
+            color: #880e4f;
         }
         
         .excedencia-box strong {
-            color: #c2185b;
+            color: #880e4f;
             display: block;
             margin-bottom: 6px;
         }
         
         .bolsa-box {
             background: #e0f2f1;
-            border-left: 4px solid #009688;
+            border-left: 4px solid #80cbc4;
             padding: 16px;
             margin: 20px 0;
             border-radius: 8px;
             font-size: 0.95em;
             line-height: 1.5;
-            color: #333;
+            color: #00695c;
         }
         
         .bolsa-box strong {
@@ -383,35 +392,35 @@
         
         .ley-familias {
             background: #e8f5e9;
-            border-left: 4px solid #4caf50;
+            border-left: 4px solid #81c784;
             padding: 16px;
             margin: 20px 0;
             border-radius: 8px;
             font-size: 0.95em;
             line-height: 1.5;
-            color: #333;
+            color: #2e7d32;
         }
         
         .ley-familias strong {
-            color: #2e7d32;
+            color: #1b5e20;
             display: block;
             margin-bottom: 6px;
         }
         
         .warning-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
             padding: 16px;
             margin-top: 20px;
             border-radius: 8px;
             font-size: 0.9em;
             line-height: 1.5;
-            color: #333;
+            color: #5d4037;
         }
         
         .progress-bar {
             height: 4px;
-            background: #e0e0e0;
+            background: #2d5500;
             margin: 15px;
             border-radius: 4px;
             overflow: hidden;
@@ -419,7 +428,7 @@
         
         .progress {
             height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #81c784;
             transition: width 0.3s ease;
         }
         
@@ -455,6 +464,7 @@
             .container { 
                 box-shadow: none; 
                 max-width: 100%; 
+                background: white;
             }
             .btn-grid, .back-btn, .progress-bar, .step-pastel { 
                 display: none; 
@@ -462,6 +472,7 @@
             .result { 
                 border-left: none; 
                 padding: 15px; 
+                background: #f5f5f5;
             }
             .result-section {
                 margin-bottom: 20px;
@@ -469,6 +480,7 @@
             }
             .claim-container {
                 page-break-inside: avoid;
+                background: #e8f5e9;
             }
         }
     </style>
@@ -485,7 +497,7 @@
         </div>
         
         <div class="form-section">
-            <!-- PASO 1: Categorías principais CON FONDO PASTEL -->
+            <!-- PASO 1: Categorías principais -->
             <div class="step active" id="step1">
                 <div class="step-pastel">
                     <div class="question">
@@ -528,16 +540,16 @@
             propia: {
                 nombre: "PROPIA",
                 subcategorias: {
-                    matrimonio: { nombre: "Matrimonio propio ou constituición de parella de feito" },
-                    consulta_medica: { nombre: "Asistencia a consulta médica propia" },
-                    riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural", requiereDetalle: true },
+                    consulta_medica: { nombre: "Asistencia a consulta médica" },
                     formacion: { nombre: "Formación individual do traballador ou traballadora" },
                     examen: { nombre: "Asistencia a exames ou probas de selección" },
+                    matrimonio: { nombre: "Matrimonio propio ou constituición de parella de feito" },
                     traslado: { nombre: "Traslado de domicilio habitual" },
-                    violencia: { nombre: "Asistencia como vítima de violencia de xénero" },
                     donacion_sangre: { nombre: "Doazón de sangue ou órganos" },
-                    sindical: { nombre: "Exercicio de funcións sindicais ou de representación" },
-                    preaviso: { nombre: "Horas para búsqueda de emprego durante preaviso (extinción contrato)" }
+                    riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural", requiereDetalle: true },
+                    preaviso: { nombre: "Horas para búsqueda de emprego durante preaviso (extinción contrato)" },
+                    violencia: { nombre: "Asistencia como vítima de violencia de xénero" },
+                    sindical: { nombre: "Exercicio de funcións sindicais ou de representación" }
                 }
             },
             pareja: {
@@ -649,7 +661,7 @@
                 normas: ["E. 37.3.a", "C. Artes Gráficas 8.5.1.a"]
             },
             propia_consulta_medica: {
-                motivo: "Asistencia a consulta médica propia",
+                motivo: "Asistencia a consulta médica, pública ou privada, cando a especialidade médica coincida con alguna recollida na carteira de servizos do Sistema Nacional de Saúde, en horas coincidentes coa xornada laboral",
                 parentesco: "Propio",
                 tiempo: "O tempo indispensable para a asistencia, sen perda de retribución",
                 tiempoDesplazamiento: null,
@@ -737,7 +749,9 @@
                 caracter: "retribuida",
                 justificante: "Acreditación de cargo ou representación",
                 normas: ["E. 68 + 13.1.2 C. Artes Gráficas"],
-                nota: "O Estatuto dos Traballadores (art. 68.e) establece 15 horas mensuais para empresas de 50-100 traballadores, pero o punto 13.1.2 do Convenio de Artes Gráficas engade 5 horas adicionais, totalizando 20 horas mensuais."
+                nota: "O Estatuto dos Traballadores (art. 68.e) establece 15 horas mensuais para empresas de 50-100 traballadores, pero o punto 13.1.2 do Convenio de Artes Gráficas engade 5 horas adicionais, totalizando 20 horas mensuais.",
+                pi: "A.P.6.10",
+                piDetalle: "As persoas designadas para representar a cada parte na Comisión de Seguimento do PI disporán do tempo necesario ata un máximo de 4 horas, que terán consideración de tempo efectivo de traballo, previas ás reunións convocadas para dito seguimento. Estas reunións terán lugar nunha das salas de reunións da empresa. Este crédito aplica aos membros da Comisión de Igualdade."
             },
             propia_preaviso: {
                 motivo: "Durante o período de preaviso por extinción do contrato (despido objetivo), para facilitar a busca de novo emprego",
@@ -1015,7 +1029,7 @@
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             
-            // SOGROS
+            // SOGROS - CORREXIDO: A.P.6.5 NON APLICA (non son consanguíneos)
             suegros_hospitalizacion: {
                 motivo: "Accidente ou enfermidade graves, hospitalización ou intervención cirúrxica, sen hospitalización, que precise reposo domiciliario do sogro ou da sogra",
                 parentesco: "Ascendente da parella (sogro ou sogra)",
@@ -1041,15 +1055,14 @@
             },
             suegros_fallecimiento: {
                 motivo: "Falecemento do sogro ou da sogra",
-                parentesco: "Ascendente da parella (sogro ou sogra)",
-                tiempo: "3 días naturais",
-                tiempoDesplazamiento: "5 días naturais*",
-                inicio: "A partir do primeiro día hábil tras o feito causante",
+                parentesco: "Ascendente da parella (sogro ou sogra) - afinidade",
+                tiempo: "2 días naturais",
+                tiempoDesplazamiento: "4 días naturais*",
+                inicio: null,
                 caracter: "retribuida",
                 justificante: "Certificado de defunción",
                 normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.c"],
-                pi: "A.P.6.5",
-                piDetalle: "Ampliación do Convenio Colectivo (aplicable a familiares políticos): 3 días naturais. Desprazamento >300km: ata 5 días.",
+                nota: "Os sogros son familiares por afinidade (non consanguíneos). O artigo 37.3 do ET e o artigo 8.5.1.c do Convenio de Artes Gráficas establecen 2 días naturais para falecemento de familiares de 2º grao (4 con desprazamento >300km). O A.P.6.5 do PI Vicusgraf NON aplica aquí, xa que só se refire a 'familiares de primeiro grao de consanguinidade'.",
                 explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
             },
             
@@ -1462,6 +1475,8 @@
                 piHtml = `<div class="excedencia-box"><strong>📋 Código de Acción Positiva A.P.6.6 (PI Vicusgraf):</strong> ${data.piDetalle}</div>`;
             } else if (data.pi === 'A.P.6.7' && data.piDetalle) {
                 piHtml = `<div class="bolsa-box"><strong>📋 Código de Acción Positiva A.P.6.7 (PI Vicusgraf):</strong> ${data.piDetalle}</div>`;
+            } else if (data.pi === 'A.P.6.10' && data.piDetalle) {
+                piHtml = `<div class="pi-box"><strong>📋 Código de Acción Positiva A.P.6.10 (PI Vicusgraf):</strong> ${data.piDetalle}</div>`;
             }
             
             // Nota adicional si existe
