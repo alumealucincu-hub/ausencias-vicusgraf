@@ -540,13 +540,15 @@
             propia: {
                 nombre: "PROPIA",
                 subcategorias: {
-                    consulta_medica: { nombre: "Asistencia a consulta médica" },
-                    formacion: { nombre: "Formación individual do traballador ou traballadora" },
-                    examen: { nombre: "Asistencia a exames ou probas de selección" },
+                    consulta_medica: { nombre: "Asistencia a consulta médica propia (art. 8.5.1.d do Convenio)" },
+                    examen: { nombre: "Matrícula e asistencia a exames" },
                     matrimonio: { nombre: "Matrimonio propio ou constituición de parella de feito" },
-                    traslado: { nombre: "Traslado de domicilio habitual" },
-                    donacion_sangre: { nombre: "Doazón de sangue ou órganos" },
+                    prenatais: { nombre: "Exames prenatais e preparación ao parto, adopción ou acollemento" },
                     riesgo: { nombre: "Risco durante o embarazo ou a lactancia natural", requiereDetalle: true },
+                    traslado: { nombre: "Traslado de domicilio habitual" },
+                    deber_inexcusable: { nombre: "Cumprimento de deber inexcusable" },
+                    formacion: { nombre: "Formación individual do traballador ou traballadora" },
+                    donacion_sangre: { nombre: "Doazón de sangue ou órganos" },
                     preaviso: { nombre: "Horas para búsqueda de emprego durante preaviso (extinción contrato)" },
                     violencia: { nombre: "Asistencia como vítima de violencia de xénero" },
                     sindical: { nombre: "Exercicio de funcións sindicais ou de representación" }
@@ -670,6 +672,26 @@
                 justificante: "Cita médica ou informe acreditativo da asistencia",
                 normas: ["C. Artes Gráficas 8.5.1.d"]
             },
+            propia_examen: {
+                motivo: "Matrícula e asistencia a exames ou probas de selección para o acceso a empregos públicos ou a outras entidades, así como para matricularse nun centro oficial ou recoñecido de ensinanza cando a presenza do traballador ou traballadora sexa imprescindible ao efecto, así como para concurrir ás convocatorias de exames de ditos centros",
+                parentesco: "Propio",
+                tiempo: "Horas necesarias para a realización das probas ou trámites de matrícula, cun máximo dunha xornada completa cando se precise desprazamento",
+                tiempoDesplazamiento: "Máximo dunha xornada completa cando se precise desprazamento",
+                inicio: null,
+                caracter: "retribuida",
+                justificante: "Convocatoria, citación, matrícula ou documentación acreditativa das probas ou do trámite de matrícula",
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.f"]
+            },
+            propia_prenatais: {
+                motivo: "Realización de exames prenatais e técnicas de preparación ao parto e, nos casos de adopción ou acollemento, ou garda con fins de adopción, para a asistencia ás preceptivas sesións de información e preparación e para a realización dos preceptivos informes psicolóxicos e sociais previos á declaración de idoneidade",
+                parentesco: "Propio",
+                tiempo: "O tempo indispensable, sempre que deban ter lugar dentro da xornada de traballo",
+                tiempoDesplazamiento: null,
+                inicio: null,
+                caracter: "retribuida",
+                justificante: "Cita médica para exames prenatais, documentación acreditativa das sesións de preparación ao parto, ou documentación dos trámites de adopción/acollemento",
+                normas: ["E. 37.3.f", "C. Artes Gráficas 8.5.1.i"]
+            },
             propia_riesgo_embarazo: {
                 motivo: "Suspensión do contrato por risco durante o embarazo",
                 parentesco: "Propio (traballadora embarazada)",
@@ -690,26 +712,6 @@
                 justificante: "Informe médico que acredite o risco para a saúde da traballadora ou do lactante",
                 normas: ["E. 48.5", "L.F. 7", "C. Artes Gráficas 6.2.1"]
             },
-            propia_formacion: {
-                motivo: "Formación individual do traballador ou traballadora para a mellora do seu posto de traballo ou a súa promoción profesional",
-                parentesco: "Propio",
-                tiempo: "20 horas anuais, acumulables ata un máximo de 100 horas (5 anos)",
-                tiempoDesplazamiento: null,
-                inicio: null,
-                caracter: "retribuida",
-                justificante: "Matrícula ou documentación acreditativa da actividade formativa",
-                normas: ["E. 23.4", "C. Artes Gráficas 6.4.3.4"]
-            },
-            propia_examen: {
-                motivo: "Asistencia a exames ou probas de selección para o acceso a empregos públicos ou a outras entidades",
-                parentesco: "Propio",
-                tiempo: "Horas necesarias para a realización das probas, cun máximo dunha xornada completa cando se precise desprazamento",
-                tiempoDesplazamiento: "Máximo dunha xornada completa cando se precise desprazamento",
-                inicio: null,
-                caracter: "retribuida",
-                justificante: "Convocatoria, citación ou documentación acreditativa das probas",
-                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.d"]
-            },
             propia_traslado: {
                 motivo: "Traslado de domicilio habitual do traballador ou traballadora",
                 parentesco: "Propio",
@@ -719,6 +721,26 @@
                 caracter: "retribuida",
                 justificante: "Documentación acreditativa do cambio de domicilio (contrato de aluguer, escritura, etc.)",
                 normas: ["C. Artes Gráficas 8.5.1.e"]
+            },
+            propia_deber_inexcusable: {
+                motivo: "Cumprimento de deber inexcusable de carácter público e persoal, comprendido o exercicio do sufraxio activo",
+                parentesco: "Propio",
+                tiempo: "O tempo indispensable para o seu cumprimento. Cando conste nunha norma legal ou convencional un período determinado, estará ao que esta dispoña en canto a duración da ausencia e á súa compensación económica",
+                tiempoDesplazamiento: null,
+                inicio: null,
+                caracter: "retribuida",
+                justificante: "Documentación acreditativa do deber inexcusable (cita electoral, citación xudicial, etc.)",
+                normas: ["E. 37.3.d", "C. Artes Gráficas 8.5.1.h"]
+            },
+            propia_formacion: {
+                motivo: "Formación individual do traballador ou traballadora para a mellora do seu posto de traballo ou a súa promoción profesional",
+                parentesco: "Propio",
+                tiempo: "20 horas anuais, acumulables ata un máximo de 100 horas (5 anos)",
+                tiempoDesplazamiento: null,
+                inicio: null,
+                caracter: "retribuida",
+                justificante: "Matrícula ou documentación acreditativa da actividade formativa",
+                normas: ["E. 23.3"]
             },
             propia_violencia: {
                 motivo: "Asistencia como vítima de violencia de xénero para a realización de actuacións xurídico-administrativas ou de asistencia social",
@@ -924,13 +946,12 @@
             hijo_matrimonio: {
                 motivo: "Matrimonio do fillo ou filla",
                 parentesco: "Descendente (fillo ou filla)",
-                tiempo: "1 día natural",
-                tiempoDesplazamiento: "2 días naturais*",
+                tiempo: "1 día",
+                tiempoDesplazamiento: null,
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
-                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.g"],
-                explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.g"]
             },
             hijo_nacimiento_nieto: {
                 motivo: "Nacemento de neto ou neta (fillo ou filla do propio fillo ou filla)",
@@ -1007,13 +1028,12 @@
             padres_matrimonio: {
                 motivo: "Matrimonio do pai ou da nai (como fillo ou filla)",
                 parentesco: "Ascendente (pai ou nai)",
-                tiempo: "Non está recollido no Estatuto dos Traballadores nin no Convenio de Artes Gráficas",
+                tiempo: "1 día",
                 tiempoDesplazamiento: null,
                 inicio: null,
-                caracter: "no-retribuida",
-                justificante: "Non procede xustificante específico",
-                normas: ["Non recollido"],
-                nota: "O Estatuto dos Traballadores e o Convenio Colectivo de Artes Gráficas non recollen permiso retribuído polo matrimonio dos pais. Podería solicitarse como asuntos propios sen dereito a retribución, segundo negociación coa empresa"
+                caracter: "retribuida",
+                justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.g"]
             },
             padres_fallecimiento: {
                 motivo: "Falecemento do pai ou da nai",
@@ -1093,13 +1113,12 @@
             hermanos_matrimonio: {
                 motivo: "Matrimonio do irmán ou da irmá",
                 parentesco: "Segundo grao de consanguinidade (irmán ou irmá)",
-                tiempo: "1 día natural",
-                tiempoDesplazamiento: "2 días naturais*",
+                tiempo: "1 día",
+                tiempoDesplazamiento: null,
                 inicio: null,
                 caracter: "retribuida",
                 justificante: "Invitación ao evento ou documentación acreditativa do matrimonio",
-                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.g"],
-                explicacionAsterisco: "cando o percorrido de ida e volta iguale ou supere os 300 km"
+                normas: ["E. 37.3", "C. Artes Gráficas 8.5.1.g"]
             },
             hermanos_fallecimiento: {
                 motivo: "Falecemento do irmán ou da irmá",
@@ -1123,7 +1142,7 @@
                 caracter: "retribuida",
                 justificante: "Informe médico que acredite: hospitalización/gravidade/accidente OU prescripción de reposo domiciliario. O alta hospitalaria ou médica non extingue o permiso se persiste a necesidade de coidados (reposo domiciliario prescrito). Non é necesario dispor os 5 días de forma seguida.",
                 normas: ["E. 37.3.b (RDL 5/2023)", "STS 6/05/2025", "Sentenza Xulgado Social nº7 Vigo 17/12/2025"],
-                nota: "Segundo grao de afinidade: cónyuge da persoa unida por parentesco de consanguinidade (parella do irmán/irmá). Segundo a doutrina do Tribunal Supremo e a Sentenza do Xulgado do Social nº7 de Vigo: O permiso non remata co alta hospitalaria nin co alta médica, senón cando desaparece a necesidade de coidados.",
+                nota: "Segundo grao de afinidade: cónyuxe da persoa unida por parentesco de consanguinidade (parella do irmán/irmá). Segundo a doutrina do Tribunal Supremo e a Sentenza do Xulgado do Social nº7 de Vigo: O permiso non remata co alta hospitalaria nin co alta médica, senón cando desaparece a necesidade de coidados.",
                 requiereExplicacion: true,
                 textoExplicacion: "O permiso continúa despois do alta hospitalaria e/ou médica sempre que o facultativo prescriba reposo domiciliario. Os días non precisan ser seguidos."
             },
